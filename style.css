@@ -8,6 +8,8 @@ html {
 	font-size: 10px;
 	font-family: 'Montserrat', sans-serif;
 	scroll-behavior: smooth;
+	color: white;
+	background-color: black;
 }
 
 a {
@@ -24,7 +26,6 @@ a {
 
 
 p {
-	color: black;
 	font-size: 1.4rem;
 	margin-top: 5px;
 	line-height: 2.5rem;
@@ -35,7 +36,6 @@ p {
 .section-title {
 	font-size: 4rem;
 	font-weight: 300;
-	color: black;
 	margin-bottom: 10px;
 	text-transform: uppercase;
 	letter-spacing: .2rem;
@@ -157,59 +157,66 @@ p {
 }
 
 
-#header .hamburger{
-    height: 60px;
-    width: 60px;
-    display: inline-block;
-    border: 3px solid white;
-    border-radius: 50%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 100;
-    cursor: pointer;
-    transform: scale(.8);
-    margin-right: 20px;
+#header .hamburger {
+	height: 60px;
+	width: 60px;
+	display: inline-block;
+	border: 3px solid white;
+	border-radius: 50%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 100;
+	cursor: pointer;
+	transform: scale(.8);
+	margin-right: 20px;
 }
-#header .hamburger::after{
-    position: absolute;
-    content: '';
-    height: 100%;
-    width: 100%;
-    border-radius: 50%;
-    border: 3px solid white;
-    animation: pulse 1s ease infinite;
+
+#header .hamburger::after {
+	position: absolute;
+	content: '';
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+	border: 3px solid white;
+	animation: pulse 1s ease infinite;
 }
-#header .hamburger .bar{
-    height: 2px;
-    width: 30px;
-    position: relative;
-    background-color: white;
-    z-index: -1;
+
+#header .hamburger .bar {
+	height: 2px;
+	width: 30px;
+	position: relative;
+	background-color: white;
+	z-index: -1;
 }
+
 #header .hamburger .bar::after,
-#header .hamburger .bar::before{
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    background-color: white;
-    transition: .3s ease;
-    transition-property: top, bottom;
-}
-#header .hamburger .bar::after {
-    top: 8px;
-}
 #header .hamburger .bar::before {
-    bottom: 8px;
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	background-color: white;
+	transition: .3s ease;
+	transition-property: top, bottom;
 }
+
+#header .hamburger .bar::after {
+	top: 8px;
+}
+
+#header .hamburger .bar::before {
+	bottom: 8px;
+}
+
 #header .hamburger.active .bar::before {
-    bottom: 0;
+	bottom: 0;
 }
-#header .hamburger.active .bar::after{
-    top: 0;
+
+#header .hamburger.active .bar::after {
+	top: 0;
 }
 
 /*End header section*/
@@ -221,7 +228,22 @@ p {
 	background-position: top center;
 	position: relative;
 	z-index: 1;
+	display: flex;
+	flex-wrap: wrap;
+	padding-top: 110px;
 }
+
+.movie img {
+	padding: 5px;
+	width: auto;
+	height: 350px;
+}
+
+.movie {
+	background-color: rgb(144, 144, 145);
+	padding: 20px 10px 0 10px;
+}
+
 
 #trending::after {
 	content: '';
@@ -242,10 +264,10 @@ p {
 	justify-content: flex-start;
 }
 
-#trending h1 {
+#trending h3 {
 	display: block;
 	width: fit-content;
-	font-size: 4rem;
+	font-size: 1rem;
 	position: relative;
 	color: transparent;
 	animation: text-reveal .5s ease forwards;
@@ -290,67 +312,55 @@ p {
 
 /*End trending section*/
 
-/*Action section*/
-
-#action .action {
+/*Applying to all movies category sections*/
+.movie-category {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	padding-top: 150px;
 	flex-direction: column;
 	text-align: center;
-	max-width: 1500px;
-	margin: 0 auto;
-	padding: 100px 0;
 }
+
+/*Action section*/
 
 #action .action-top {
 	max-width: 500px;
-	margin: 0 auto;
 }
 
-#action .action-bottom {
+.section-content {
+	padding-bottom: 15px;
+	margin: 20px 50px;
+	overflow-x: auto;
+}
+
+.movies-list {
+	padding: 10px 10px 0 10px;
 	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-wrap: wrap;
-	margin-top: 50px;
+
 }
 
-#action .action-item {
-	flex-basis: 80%;
-	display: flex;
-	align-items: flex-start;
-	justify-content: center;
-	flex-direction: column;
-	padding: 30px;
-	border-radius: 10px;
-	background-color: black;
-	background-size: cover;
-	margin: 10px 5%;
-	position: relative;
-	z-index: 1;
-	overflow: hidden;
+/* Style the scrollbar */
+::-webkit-scrollbar {
+	width: 10px;
 }
 
-#action .action-item::after {
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 0;
-	height: 100%;
-	width: 100%;
-	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-	opacity: 0.9;
-	z-index: -1;
+/* Track */
+::-webkit-scrollbar-track {
+	background: #000000;
 }
 
-#action .action-item h2 {
-	font-size: 2rem;
-	color: white;
-	margin-bottom: 10px;
-	text-transform: uppercase;
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #888;
+	border-radius: 50px;
+	border: 1px white solid;
+
 }
 
-#action .action-item p {
-	color: white;
-	text-align: left;
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
 }
 
 /*End action section*/
@@ -379,7 +389,7 @@ p {
 }
 
 #family .family-item {
-	flex-basis: 80%;
+
 	display: flex;
 	align-items: flex-start;
 	justify-content: center;
@@ -444,7 +454,7 @@ p {
 }
 
 #horror .horror-item {
-	flex-basis: 80%;
+
 	display: flex;
 	align-items: flex-start;
 	justify-content: center;
@@ -509,7 +519,7 @@ p {
 }
 
 #comedy .comedy-item {
-	flex-basis: 80%;
+
 	display: flex;
 	align-items: flex-start;
 	justify-content: center;
@@ -574,7 +584,7 @@ p {
 }
 
 #drama .drama-item {
-	flex-basis: 80%;
+
 	display: flex;
 	align-items: flex-start;
 	justify-content: center;
@@ -648,32 +658,33 @@ p {
 /*Media query for tablet*/
 
 @media only screen and (min-width: 768px) {
-    .cta {
-        font-size: 2.5rem;
-        padding: 20px 60px;
-    }
-
-    h1 .section-title {
-        font-size: 6rem;
-    }
-
-    /*trending*/
-    #trending h1 {
-        font-size: 7rem;
-    }
-
-    /*End trending*/
-
-    /*action section*/
-    #action .action-bottom .action-item {
-		flex-basis: 45%;
-		margin: 2.5%;
+	.cta {
+		font-size: 2.5rem;
+		padding: 20px 60px;
 	}
 
-    /*End action section*/
+	h1 .section-title {
+		font-size: 6rem;
+	}
 
-    
+	/*trending*/
+	#trending h1 {
+		font-size: 7rem;
+	}
+
+	/*End trending*/
+
+	/*action section*/
+	#action .action-bottom .action-item {
+
+		margin: .5%;
+	}
+
+	/*End action section*/
+
+
 }
+
 /*End media query for tablet*/
 
 
@@ -682,27 +693,31 @@ p {
 
 /*Media query for desktop*/
 @media only screen and (min-width: 1200px) {
-    /*Header*/
+	/*Header*/
 
-    /* Hamburger can be added back by removing line below*/
-    #header .hamburger{
-        display: none;
-    }
-    /*Hamburger can be added back by removing line above*/
-    #header .nav-list ul{
-        position: initial;
-        display: block;
-        height: auto;
-        width: fit-content;
-        background-color: transparent;
-    }
-    #header .nav-list ul li{
-        display: inline-block;
-    }
-    #header .nav-list ul a::after{
-        display: none;
-    }
-    /*End header*/
+	/* Hamburger can be added back by removing line below*/
+	#header .hamburger {
+		display: none;
+	}
+
+	/*Hamburger can be added back by removing line above*/
+	#header .nav-list ul {
+		position: initial;
+		display: block;
+		height: auto;
+		width: fit-content;
+		background-color: transparent;
+	}
+
+	#header .nav-list ul li {
+		display: inline-block;
+	}
+
+	#header .nav-list ul a::after {
+		display: none;
+	}
+
+	/*End header*/
 
 }
 

@@ -56,7 +56,7 @@ function displayTrendingMovies(movies) {
   movies.forEach((movie) => {
     const { poster_path, title } = movie;
     const movieElement = document.createElement("div");
-    movieElement.classList.add("trending-movie");
+    movieElement.classList.add("movie");
     movieElement.innerHTML = `
         <img src="${IMG_PATH + poster_path}" alt="${title}" />
         <h3>${title}</h3>
@@ -92,14 +92,14 @@ async function fetchActionMovies() {
 
 function displayActionMovies(actionMovies) {
   const actionSection = document.getElementById("action");
-  const actionItem = actionSection.querySelector(".action-item");
+  const actionItem = actionSection.querySelector(".movies-list");
   actionSection.querySelector(".section-title").textContent = "Action";
   actionItem.innerHTML = "";
 
   actionMovies.forEach((movie) => {
     const { poster_path, title } = movie;
     const movieElement = document.createElement("div");
-    movieElement.classList.add("action-movie");
+    movieElement.classList.add("movie");
     movieElement.innerHTML = `
         <img src="${IMG_PATH + poster_path}" alt="${title}" />
         <h3>${title}</h3>
@@ -142,7 +142,7 @@ function displayFamilyMovies(familyMovies) {
   familyMovies.forEach((movie) => {
     const { poster_path, title } = movie;
     const movieElement = document.createElement("div");
-    movieElement.classList.add("family-movie");
+    movieElement.classList.add("movie");
     movieElement.innerHTML = `
         <img src="${IMG_PATH + poster_path}" alt="${title}" />
         <h3>${title}</h3>
@@ -185,7 +185,7 @@ function displayHorrorMovies(horrorMovies) {
   horrorMovies.forEach((movie) => {
     const { poster_path, title } = movie;
     const movieElement = document.createElement("div");
-    movieElement.classList.add("horror-movie");
+    movieElement.classList.add("movie");
     movieElement.innerHTML = `
         <img src="${IMG_PATH + poster_path}" alt="${title}" />
         <h3>${title}</h3>
@@ -228,7 +228,7 @@ function displayComedyMovies(comedyMovies) {
   comedyMovies.forEach((movie) => {
     const { poster_path, title } = movie;
     const movieElement = document.createElement("div");
-    movieElement.classList.add("comedy-movie");
+    movieElement.classList.add("movie");
     movieElement.innerHTML = `
         <img src="${IMG_PATH + poster_path}" alt="${title}" />
         <h3>${title}</h3>
@@ -271,7 +271,7 @@ function displayDramaMovies(dramaMovies) {
   dramaMovies.forEach((movie) => {
     const { poster_path, title } = movie;
     const movieElement = document.createElement("div");
-    movieElement.classList.add("drama-movie");
+    movieElement.classList.add("movie");
     movieElement.innerHTML = `
         <img src="${IMG_PATH + poster_path}" alt="${title}" />
         <h3>${title}</h3>

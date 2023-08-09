@@ -9,8 +9,162 @@ html {
 	font-family: 'Montserrat', sans-serif;
 	scroll-behavior: smooth;
 	color: white;
-	background-color: black;
+	background-color: #030b17;
 }
+
+.tittle-movies:hover {
+	color: #5f1087;
+	background: linear-gradient(120deg, #5b0587, #ff0080, #ee3ce8);
+	background-size: 400% 400%;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.tittle-movies:hover::after {
+	background: none;
+}
+
+/*Tittle movie JJTS hover*/
+
+/* Initially hide the full name */
+.full-name {
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out;
+	/* Add a transition for smooth fading */
+}
+
+/* Show the full name when hovering over the short name */
+.short-name:hover+.full-name {
+	opacity: 1;
+}
+
+/* Hide the short name when hovering over it */
+.short-name:hover {
+	opacity: 0;
+}
+
+/*end of movies JJTS hover*/
+
+/*Find your next movie*/
+.trending-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 100vh;
+}
+
+.text-find {
+	font-family: 'montserrat';
+	font-size: 28px;
+	text-align: left;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	line-height: 70px;
+	text-decoration: none;
+	color: #faf7f7;
+}
+
+/*end of find your next movie*/
+
+/*Browser Btn Animated*/
+.browse-btn {
+	display: block;
+	width: 220px;
+	height: 70px;
+	z-index: 1;
+	color: #5f1087;
+}
+
+.browse-btn:after {
+	content: '';
+	background: linear-gradient(120deg, #6559ae, #ff7159, #6559ae);
+	background-size: 400% 400%;
+	-webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 4px, 216px 4px, 216px 66px, 4px 66px, 4px 100%, 100% 100%, 100% 0%, 0% 0%);
+	-webkit-animation: gradient 3s ease-in-out infinite, border 1s forwards ease-in-out reverse;
+}
+
+.browse-btn>span {
+	display: block;
+	background: linear-gradient(120deg, #6559ae, #ff7159, #6559ae);
+	background-size: 100%;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-moz-animation: gradient 3s ease-in-out infinite;
+	-webkit-animation: gradient 3s ease-in-out infinite;
+	animation: gradient 3s ease-in-out infinite;
+}
+
+/* helpers for btn*/
+
+.absolute-centering,
+body:after,
+.browse-btn,
+.browse-btn:after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+.text-formatting,
+.browse-btn {
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	letter-spacing: 2px;
+	line-height: 70px;
+	font-family: 'raleway';
+	font-size: 28px;
+}
+
+/* motion for btn */
+
+@-moz-keyframes gradient {
+	0% {
+		background-position: 14% 0%;
+	}
+
+	50% {
+		background-position: 87% 100%;
+	}
+
+	100% {
+		background-position: 14% 0%;
+	}
+}
+
+@-webkit-keyframes gradient {
+	0% {
+		background-position: 14% 0%;
+	}
+
+	50% {
+		background-position: 87% 100%;
+	}
+
+	100% {
+		background-position: 14% 0%;
+	}
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 14% 0%;
+	}
+
+	50% {
+		background-position: 87% 100%;
+	}
+
+	100% {
+		background-position: 14% 0%;
+	}
+}
+
+/*End of Browser Btn Animated*/
+
 
 a {
 	text-decoration: none;
@@ -42,16 +196,26 @@ p {
 	text-align: center;
 }
 
-.section-title span {
-	color: purple;
+/*section title with color*/
+.section-title {
+	color: #5f1087;
 }
 
+.section-title:hover {
+	color: #5f1087;
+	background: linear-gradient(120deg, #5b0587, #ff0080, #ee3ce8);
+	background-size: 200% 200%;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+/*end of section title with color*/
 .cta {
 	display: inline-block;
 	padding: 10px 30px;
 	color: white;
 	background-color: transparent;
-	border: 2px solid purple;
+	border: 2px solid rgb(128, 0, 0);
 	font-size: 2rem;
 	text-transform: uppercase;
 	letter-spacing: .1rem;
@@ -62,7 +226,8 @@ p {
 
 .cta:hover {
 	color: white;
-	background-color: purple;
+	background-color: #5f1087";
+
 }
 
 .brand h1 {
@@ -72,11 +237,12 @@ p {
 }
 
 .brand h1 span {
-	color: purple;
+	color: #5f1087";
+
 }
 
 
-/*Header section*/
+/*Header hamburger section*/
 #header {
 	position: fixed;
 	z-index: 1000;
@@ -153,7 +319,11 @@ p {
 }
 
 #header .nav-list ul li:hover a {
-	color: purple;
+
+	background: linear-gradient(120deg, #5b0587, #ff0080, #ee3ce8);
+	background-size: 200% 200%;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 
@@ -219,11 +389,11 @@ p {
 	top: 0;
 }
 
-/*End header section*/
+/*End header Hamburger section*/
 
 /*Trending Section*/
 #trending {
-	background-color: black;
+
 	background-size: cover;
 	background-position: top center;
 	position: relative;
@@ -231,8 +401,12 @@ p {
 	display: flex;
 	flex-wrap: wrap;
 	padding-top: 110px;
+	background-color: #1c0c4e;
+	border-radius: 20px;
+	padding: 20px 10px 30px 10px;
 }
 
+/*how the img poster of movie is looking*/
 .movie img {
 	padding: 5px;
 	width: auto;
@@ -240,8 +414,9 @@ p {
 }
 
 .movie {
-	background-color: rgb(144, 144, 145);
+	background-color: #1c0c4e;
 	padding: 20px 10px 0 10px;
+	border-radius: 3px;
 }
 
 
@@ -347,7 +522,7 @@ p {
 
 /* Track */
 ::-webkit-scrollbar-track {
-	background: #000000;
+	background: #030b17;
 }
 
 /* Handle */
@@ -541,7 +716,7 @@ p {
 	top: 0;
 	height: 100%;
 	width: 100%;
-	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	background-image: linear-gradient(60deg, #374658 0%, #485563 100%);
 	opacity: 0.9;
 	z-index: -1;
 }

@@ -284,6 +284,7 @@ p {
 	z-index: 1;
 	overflow-x: hidden;
 	transition: .3s ease left;
+
 }
 
 #header .nav-list ul.active {
@@ -297,8 +298,8 @@ p {
 	text-decoration: none;
 	color: white;
 	text-transform: uppercase;
-	padding: 10px;
-	display: block;
+	padding: 8px;
+	display: flex;
 }
 
 #header .nav-list ul a::after {
@@ -312,6 +313,7 @@ p {
 	letter-spacing: 50px;
 	z-index: -1;
 	transition: .3s ease letter-spacing;
+
 }
 
 #header .nav-list ul li:hover a::after {
@@ -325,6 +327,7 @@ p {
 	background-size: 200% 200%;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+
 }
 
 
@@ -342,6 +345,8 @@ p {
 	cursor: pointer;
 	transform: scale(.8);
 	margin-right: 20px;
+
+
 }
 
 #header .hamburger::after {
@@ -352,6 +357,8 @@ p {
 	border-radius: 50%;
 	border: 3px solid white;
 	animation: pulse 1s ease infinite;
+
+
 }
 
 #header .hamburger .bar {
@@ -360,6 +367,7 @@ p {
 	position: relative;
 	background-color: white;
 	z-index: -1;
+
 }
 
 #header .hamburger .bar::after,
@@ -868,7 +876,7 @@ p {
 
 
 /*Media query for desktop*/
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1400px) {
 	/*Header*/
 
 	/* Hamburger can be added back by removing line below*/

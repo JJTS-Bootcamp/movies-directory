@@ -8,23 +8,179 @@ html {
 	font-size: 10px;
 	font-family: 'Montserrat', sans-serif;
 	scroll-behavior: smooth;
+	color: white;
+	background-color: #030b17;
 }
+
+.tittle-movies:hover {
+	color: #5f1087;
+	background: linear-gradient(120deg, #5b0587, #ff0080, #ee3ce8);
+	background-size: 400% 400%;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.tittle-movies:hover::after {
+	background: none;
+}
+
+/*Tittle movie JJTS hover*/
+
+/* Initially hide the full name */
+.full-name {
+	opacity: 0;
+	font-size: 15px;
+	transition: opacity 0.2s ease-in-out;
+	/* Add a transition for smooth fading */
+}
+
+/* Show the full name when hovering over the short name */
+.short-name:hover+.full-name {
+	opacity: 1;
+}
+
+/* Hide the short name when hovering over it */
+.short-name:hover {
+	opacity: 0;
+}
+
+/*end of movies JJTS hover*/
+
+/*Find your next movie*/
+.trending-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 100vh;
+}
+
+.text-find {
+	font-family: 'montserrat';
+	font-size: 28px;
+	text-align: left;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	line-height: 70px;
+	text-decoration: none;
+	color: #faf7f7;
+}
+
+/*end of find your next movie*/
+
+/*Browser Btn Animated*/
+.browse-btn {
+	display: block;
+	width: 220px;
+	height: 70px;
+	z-index: 1;
+	color: #5f1087;
+}
+
+.browse-btn:after {
+	content: '';
+	background: linear-gradient(120deg, #6559ae, #ff7159, #6559ae);
+	background-size: 400% 400%;
+	-webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 4px, 216px 4px, 216px 66px, 4px 66px, 4px 100%, 100% 100%, 100% 0%, 0% 0%);
+	-webkit-animation: gradient 3s ease-in-out infinite, border 1s forwards ease-in-out reverse;
+}
+
+.browse-btn>span {
+	display: block;
+	background: linear-gradient(120deg, #6559ae, #ff7159, #6559ae);
+	background-size: 100%;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-moz-animation: gradient 3s ease-in-out infinite;
+	-webkit-animation: gradient 3s ease-in-out infinite;
+	animation: gradient 3s ease-in-out infinite;
+}
+
+/* helpers for btn*/
+
+.absolute-centering,
+body:after,
+.browse-btn,
+.browse-btn:after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+.text-formatting,
+.browse-btn {
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	letter-spacing: 2px;
+	line-height: 70px;
+	font-family: 'raleway';
+	font-size: 28px;
+}
+
+/* motion for btn */
+
+@-moz-keyframes gradient {
+	0% {
+		background-position: 14% 0%;
+	}
+
+	50% {
+		background-position: 87% 100%;
+	}
+
+	100% {
+		background-position: 14% 0%;
+	}
+}
+
+@-webkit-keyframes gradient {
+	0% {
+		background-position: 14% 0%;
+	}
+
+	50% {
+		background-position: 87% 100%;
+	}
+
+	100% {
+		background-position: 14% 0%;
+	}
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 14% 0%;
+	}
+
+	50% {
+		background-position: 87% 100%;
+	}
+
+	100% {
+		background-position: 14% 0%;
+	}
+}
+
+/*End of Browser Btn Animated*/
+
 
 a {
 	text-decoration: none;
 }
 
 .container {
-	min-height: 100vh;
+	/*min-height: 100vh;*/
 	width: 100%;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-between;
 }
 
 
 p {
-	color: black;
 	font-size: 1.4rem;
 	margin-top: 5px;
 	line-height: 2.5rem;
@@ -35,23 +191,32 @@ p {
 .section-title {
 	font-size: 4rem;
 	font-weight: 300;
-	color: black;
 	margin-bottom: 10px;
 	text-transform: uppercase;
 	letter-spacing: .2rem;
 	text-align: center;
 }
 
-.section-title span {
-	color: purple;
+/*section title with color*/
+.section-title {
+	color: #5f1087;
 }
 
+.section-title:hover {
+	color: #5f1087;
+	background: linear-gradient(120deg, #5b0587, #ff0080, #ee3ce8);
+	background-size: 200% 200%;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+/*end of section title with color*/
 .cta {
 	display: inline-block;
 	padding: 10px 30px;
 	color: white;
 	background-color: transparent;
-	border: 2px solid purple;
+	border: 2px solid rgb(128, 0, 0);
 	font-size: 2rem;
 	text-transform: uppercase;
 	letter-spacing: .1rem;
@@ -62,7 +227,8 @@ p {
 
 .cta:hover {
 	color: white;
-	background-color: purple;
+	background-color: #5f1087";
+
 }
 
 .brand h1 {
@@ -72,11 +238,12 @@ p {
 }
 
 .brand h1 span {
-	color: purple;
+	color: #5f1087";
+
 }
 
 
-/*Header section*/
+/*Header hamburger section*/
 #header {
 	position: fixed;
 	z-index: 1000;
@@ -98,7 +265,7 @@ p {
 	justify-content: space-between;
 	width: 100%;
 	height: 100%;
-	max-width: 1300px;
+
 	padding: 0 10px;
 }
 
@@ -116,7 +283,7 @@ p {
 	align-items: center;
 	z-index: 1;
 	overflow-x: hidden;
-	transition: .5s ease left;
+	transition: .3s ease left;
 }
 
 #header .nav-list ul.active {
@@ -130,7 +297,7 @@ p {
 	text-decoration: none;
 	color: white;
 	text-transform: uppercase;
-	padding: 20px;
+	padding: 10px;
 	display: block;
 }
 
@@ -153,75 +320,106 @@ p {
 }
 
 #header .nav-list ul li:hover a {
-	color: purple;
+
+	background: linear-gradient(120deg, #5b0587, #ff0080, #ee3ce8);
+	background-size: 200% 200%;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 
-#header .hamburger{
-    height: 60px;
-    width: 60px;
-    display: inline-block;
-    border: 3px solid white;
-    border-radius: 50%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 100;
-    cursor: pointer;
-    transform: scale(.8);
-    margin-right: 20px;
+#header .hamburger {
+	height: 60px;
+	width: 60px;
+	display: inline-block;
+	border: 3px solid white;
+	border-radius: 50%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 100;
+	cursor: pointer;
+	transform: scale(.8);
+	margin-right: 20px;
 }
-#header .hamburger::after{
-    position: absolute;
-    content: '';
-    height: 100%;
-    width: 100%;
-    border-radius: 50%;
-    border: 3px solid white;
-    animation: pulse 1s ease infinite;
+
+#header .hamburger::after {
+	position: absolute;
+	content: '';
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+	border: 3px solid white;
+	animation: pulse 1s ease infinite;
 }
-#header .hamburger .bar{
-    height: 2px;
-    width: 30px;
-    position: relative;
-    background-color: white;
-    z-index: -1;
+
+#header .hamburger .bar {
+	height: 2px;
+	width: 30px;
+	position: relative;
+	background-color: white;
+	z-index: -1;
 }
+
 #header .hamburger .bar::after,
-#header .hamburger .bar::before{
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    background-color: white;
-    transition: .3s ease;
-    transition-property: top, bottom;
-}
-#header .hamburger .bar::after {
-    top: 8px;
-}
 #header .hamburger .bar::before {
-    bottom: 8px;
-}
-#header .hamburger.active .bar::before {
-    bottom: 0;
-}
-#header .hamburger.active .bar::after{
-    top: 0;
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	background-color: white;
+	transition: .3s ease;
+	transition-property: top, bottom;
 }
 
-/*End header section*/
+#header .hamburger .bar::after {
+	top: 8px;
+}
+
+#header .hamburger .bar::before {
+	bottom: 8px;
+}
+
+#header .hamburger.active .bar::before {
+	bottom: 0;
+}
+
+#header .hamburger.active .bar::after {
+	top: 0;
+}
+
+/*End header Hamburger section*/
 
 /*Trending Section*/
 #trending {
-	background-color: black;
+
 	background-size: cover;
 	background-position: top center;
 	position: relative;
 	z-index: 1;
+	display: flex;
+	flex-wrap: wrap;
+	padding-top: 110px;
+	background-color: #1c0c4e;
+	border-radius: 20px;
+	padding: 20px 10px 30px 10px;
 }
+
+/*how the img poster of movie is looking*/
+.movie img {
+	padding: 5px;
+	width: auto;
+	height: 350px;
+}
+
+.movie {
+	background-color: #1c0c4e;
+	padding: 20px 10px 0 10px;
+	border-radius: 3px;
+}
+
 
 #trending::after {
 	content: '';
@@ -242,10 +440,10 @@ p {
 	justify-content: flex-start;
 }
 
-#trending h1 {
+#trending h3 {
 	display: block;
 	width: fit-content;
-	font-size: 4rem;
+	font-size: 1rem;
 	position: relative;
 	color: transparent;
 	animation: text-reveal .5s ease forwards;
@@ -290,67 +488,55 @@ p {
 
 /*End trending section*/
 
-/*Action section*/
-
-#action .action {
+/*Applying to all movies category sections*/
+.movie-category {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	padding-top: 150px;
 	flex-direction: column;
 	text-align: center;
-	max-width: 1500px;
-	margin: 0 auto;
-	padding: 100px 0;
 }
+
+/*Action section*/
 
 #action .action-top {
 	max-width: 500px;
-	margin: 0 auto;
 }
 
-#action .action-bottom {
+.section-content {
+	padding-bottom: 15px;
+	margin: 20px 50px;
+	overflow-x: auto;
+}
+
+.movies-list {
+	padding: 10px 10px 0 10px;
 	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-wrap: wrap;
-	margin-top: 50px;
+
 }
 
-#action .action-item {
-	flex-basis: 80%;
-	display: flex;
-	align-items: flex-start;
-	justify-content: center;
-	flex-direction: column;
-	padding: 30px;
-	border-radius: 10px;
-	background-color: black;
-	background-size: cover;
-	margin: 10px 5%;
-	position: relative;
-	z-index: 1;
-	overflow: hidden;
+/* Style the scrollbar */
+::-webkit-scrollbar {
+	width: 10px;
 }
 
-#action .action-item::after {
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 0;
-	height: 100%;
-	width: 100%;
-	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-	opacity: 0.9;
-	z-index: -1;
+/* Track */
+::-webkit-scrollbar-track {
+	background: #030b17;
 }
 
-#action .action-item h2 {
-	font-size: 2rem;
-	color: white;
-	margin-bottom: 10px;
-	text-transform: uppercase;
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #888;
+	border-radius: 50px;
+	border: 1px white solid;
+
 }
 
-#action .action-item p {
-	color: white;
-	text-align: left;
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
 }
 
 /*End action section*/
@@ -379,7 +565,7 @@ p {
 }
 
 #family .family-item {
-	flex-basis: 80%;
+
 	display: flex;
 	align-items: flex-start;
 	justify-content: center;
@@ -444,7 +630,7 @@ p {
 }
 
 #horror .horror-item {
-	flex-basis: 80%;
+
 	display: flex;
 	align-items: flex-start;
 	justify-content: center;
@@ -509,7 +695,7 @@ p {
 }
 
 #comedy .comedy-item {
-	flex-basis: 80%;
+
 	display: flex;
 	align-items: flex-start;
 	justify-content: center;
@@ -531,7 +717,7 @@ p {
 	top: 0;
 	height: 100%;
 	width: 100%;
-	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	background-image: linear-gradient(60deg, #374658 0%, #485563 100%);
 	opacity: 0.9;
 	z-index: -1;
 }
@@ -574,7 +760,7 @@ p {
 }
 
 #drama .drama-item {
-	flex-basis: 80%;
+
 	display: flex;
 	align-items: flex-start;
 	justify-content: center;
@@ -648,32 +834,33 @@ p {
 /*Media query for tablet*/
 
 @media only screen and (min-width: 768px) {
-    .cta {
-        font-size: 2.5rem;
-        padding: 20px 60px;
-    }
-
-    h1 .section-title {
-        font-size: 6rem;
-    }
-
-    /*trending*/
-    #trending h1 {
-        font-size: 7rem;
-    }
-
-    /*End trending*/
-
-    /*action section*/
-    #action .action-bottom .action-item {
-		flex-basis: 45%;
-		margin: 2.5%;
+	.cta {
+		font-size: 2.5rem;
+		padding: 20px 60px;
 	}
 
-    /*End action section*/
+	h1 .section-title {
+		font-size: 6rem;
+	}
 
-    
+	/*trending*/
+	#trending h1 {
+		font-size: 7rem;
+	}
+
+	/*End trending*/
+
+	/*action section*/
+	#action .action-bottom .action-item {
+
+		margin: .5%;
+	}
+
+	/*End action section*/
+
+
 }
+
 /*End media query for tablet*/
 
 
@@ -682,27 +869,31 @@ p {
 
 /*Media query for desktop*/
 @media only screen and (min-width: 1200px) {
-    /*Header*/
+	/*Header*/
 
-    /* Hamburger can be added back by removing line below*/
-    #header .hamburger{
-        display: none;
-    }
-    /*Hamburger can be added back by removing line above*/
-    #header .nav-list ul{
-        position: initial;
-        display: block;
-        height: auto;
-        width: fit-content;
-        background-color: transparent;
-    }
-    #header .nav-list ul li{
-        display: inline-block;
-    }
-    #header .nav-list ul a::after{
-        display: none;
-    }
-    /*End header*/
+	/* Hamburger can be added back by removing line below*/
+	#header .hamburger {
+		display: none;
+	}
+
+	/*Hamburger can be added back by removing line above*/
+	#header .nav-list ul {
+		position: initial;
+		display: block;
+		height: auto;
+		width: 900px;
+		background-color: transparent;
+	}
+
+	#header .nav-list ul li {
+		display: inline-block;
+	}
+
+	#header .nav-list ul a::after {
+		display: none;
+	}
+
+	/*End header*/
 
 }
 

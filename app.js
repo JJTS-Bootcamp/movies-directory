@@ -15,7 +15,7 @@ hamburger.addEventListener("click", () => {
 document.addEventListener("scroll", () => {
   var scroll_position = window.scrollY;
   if (scroll_position > 250) {
-    header.style.backgroundColor = "#29323c";
+    header.style.backgroundColor = "#0c003b";
   } else {
     header.style.backgroundColor = "transparent";
   }
@@ -56,7 +56,7 @@ function displayTrendingMovies(movies) {
   movies.forEach((movie) => {
     const { poster_path, title } = movie;
     const movieElement = document.createElement("div");
-    movieElement.classList.add("trending-movie");
+    movieElement.classList.add("movie");
     movieElement.innerHTML = `
         <img src="${IMG_PATH + poster_path}" alt="${title}" />
         <h3>${title}</h3>
@@ -92,14 +92,14 @@ async function fetchActionMovies() {
 
 function displayActionMovies(actionMovies) {
   const actionSection = document.getElementById("action");
-  const actionItem = actionSection.querySelector(".action-item");
+  const actionItem = actionSection.querySelector(".movies-list");
   actionSection.querySelector(".section-title").textContent = "Action";
   actionItem.innerHTML = "";
 
   actionMovies.forEach((movie) => {
     const { poster_path, title } = movie;
     const movieElement = document.createElement("div");
-    movieElement.classList.add("action-movie");
+    movieElement.classList.add("movie");
     movieElement.innerHTML = `
         <img src="${IMG_PATH + poster_path}" alt="${title}" />
         <h3>${title}</h3>
@@ -135,14 +135,14 @@ async function fetchFamilyMovies() {
 
 function displayFamilyMovies(familyMovies) {
   const familySection = document.getElementById("family");
-  const familyItem = familySection.querySelector(".family-item");
+  const familyItem = familySection.querySelector(".movies-list");
   familySection.querySelector(".section-title").textContent = "Family";
   familyItem.innerHTML = "";
 
   familyMovies.forEach((movie) => {
     const { poster_path, title } = movie;
     const movieElement = document.createElement("div");
-    movieElement.classList.add("family-movie");
+    movieElement.classList.add("movie");
     movieElement.innerHTML = `
         <img src="${IMG_PATH + poster_path}" alt="${title}" />
         <h3>${title}</h3>
@@ -178,14 +178,14 @@ async function fetchHorrorMovies() {
 
 function displayHorrorMovies(horrorMovies) {
   const horrorSection = document.getElementById("horror");
-  const horrorItem = horrorSection.querySelector(".horror-item");
+  const horrorItem = horrorSection.querySelector(".movies-list");
   horrorSection.querySelector(".section-title").textContent = "Horror";
   horrorItem.innerHTML = "";
 
   horrorMovies.forEach((movie) => {
     const { poster_path, title } = movie;
     const movieElement = document.createElement("div");
-    movieElement.classList.add("horror-movie");
+    movieElement.classList.add("movie");
     movieElement.innerHTML = `
         <img src="${IMG_PATH + poster_path}" alt="${title}" />
         <h3>${title}</h3>
@@ -221,14 +221,14 @@ async function fetchComedyMovies() {
 
 function displayComedyMovies(comedyMovies) {
   const comedySection = document.getElementById("comedy");
-  const comedyItem = comedySection.querySelector(".comedy-item");
+  const comedyItem = comedySection.querySelector(".movies-list");
   comedySection.querySelector(".section-title").textContent = "Comedy";
   comedyItem.innerHTML = "";
 
   comedyMovies.forEach((movie) => {
     const { poster_path, title } = movie;
     const movieElement = document.createElement("div");
-    movieElement.classList.add("comedy-movie");
+    movieElement.classList.add("movie");
     movieElement.innerHTML = `
         <img src="${IMG_PATH + poster_path}" alt="${title}" />
         <h3>${title}</h3>
@@ -264,14 +264,14 @@ async function fetchDramaMovies() {
 
 function displayDramaMovies(dramaMovies) {
   const dramaSection = document.getElementById("drama");
-  const dramaItem = dramaSection.querySelector(".drama-item");
+  const dramaItem = dramaSection.querySelector(".movies-list");
   dramaSection.querySelector(".section-title").textContent = "Drama";
   dramaItem.innerHTML = "";
 
   dramaMovies.forEach((movie) => {
     const { poster_path, title } = movie;
     const movieElement = document.createElement("div");
-    movieElement.classList.add("drama-movie");
+    movieElement.classList.add("movie");
     movieElement.innerHTML = `
         <img src="${IMG_PATH + poster_path}" alt="${title}" />
         <h3>${title}</h3>

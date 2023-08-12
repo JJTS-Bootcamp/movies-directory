@@ -1,139 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Movie App</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Movie App</title>
 </head>
+
 <body>
-    <!--Header-->
-    <section id="header">
-        <div class="header container">
-            <div class="nav-bar">
-                <div class="brand">
-                    <a href="#trending"><h1><span>M</span>ovie <span>B</span>uff</h1></a>
-                </div>
-                <div class="nav-list">
-                    <div class="hamburger"><div class="bar"></div>
-                </div>
-                    <ul>
-                        <li><a href="#trending" data-after="Home">Home</a></li>
-                        <li><a href="#action" data-after="Action">Action</a></li>
-                        <li><a href="#family" data-after="Family">Family</a></li>
-                        <li><a href="#horror" data-after="Horror">Horror</a></li>
-                        <li><a href="#comedy" data-after="Comedy">Comedy</a></li>
-                        <li><a href="#drama" data-after="Drama">Drama</a></li>
-                    </ul>
-                </div>
+  <!--Header-->
+  <section id="header">
+    <div class="header container">
+      <!--Trying to make when click on Movies JJTS go to home where appears find your next movie-->
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#find-my-movies" data-after="header">
+            <div class="tittle-movies">
+              <h1>
+                <span style="color: #5f1087">M</span>ovies
+                <span class="short-name" style="color: #5f1087">JJTS</span>
+                <span class="full-name" title="Joyful Journey Tech Studios">Joyful Journey Tech Studios</span>
+                <!--This is the full name of the company if H4 will put in under the title movies-->
+              </h1>
             </div>
+          </a>
         </div>
-    </section>
-    <!--End header-->
 
-    <!--Trending section-->
-    <section id="trending">
-        <div class="trending container">
-            <div>
-                <h1>Find<span></span></h1>
-                <h1>Your Next<span></span></h1>
-                <h1>Movie<span></span></h1>
-                <a href="#search" type="button" class="cta">Browse</a>
-            </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="#trending" data-after="Trending">Trending</a></li>
+            <li><a href="#action" data-after="Action">Action</a></li>
+            <li><a href="#family" data-after="Family">Family</a></li>
+            <li><a href="#horror" data-after="Horror">Horror</a></li>
+            <li><a href="#comedy" data-after="Comedy">Comedy</a></li>
+            <li><a href="#drama" data-after="Drama">Drama</a></li>
+          </ul>
         </div>
-    </section>
-    <!--End trending section-->
+      </div>
+    </div>
+  </section>
+  <!--End header-->
 
-    <!--COMMENT MEETING-->
-    <!--Action section-->
-    <section id="action">
-        <div class="action container">
-            <div class="action-top">
-                <h1 class="section-title">Act<span>i</span>on</h1>
-                <p>Lorem Ipsum.</p>
-            </div>
-            <div class="action-bottom">
-                <div class="action-item">
-                    <div></div>
-                    <h2>Edge of your seat action</h2>
-                    <p> Lorem Ipsum <!--Some text here describing the action genre--> </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--End action section-->
+  <!--Trending section-->
+  <div class="trending-container">
+    <div class="text-find">
+      <h1>Find<span></span></h1>
+      <h1>Your Next<span></span></h1>
+      <h1 style="color: #5f1087">Movie<span></span></h1>
+    </div>
+    <!--<div style="position: relative;">-->
+    <div class="browser-wrapper">
+      <a href="#search" type="button" class="browse-btn">Browse</a>
+    </div>
+  </div>
 
-    <!--Family section-->
-    <section id="family">
-        <div class="family container">
-            <div class="family-top">
-                <h1 class="section-title">Fam<span>i</span>ly</h1>
-                <p>Lorem Ipsum.</p>
-            </div>
-            <div class="family-bottom">
-                <div class="family-item">
-                    <div></div>
-                    <h2>Movies the whole family will love</h2>
-                    <p> Lorem Ipsum <!--Some text here describing the family genre--> </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--End family section-->
+  <section id="trending"></section>
+  <!--End trending section-->
 
-    <!--Horror section-->
-    <section id="horror">
-        <div class="horror container">
-            <div class="horror-top">
-                <h1 class="section-title">Hor<span>r</span>or</h1>
-                <p>Lorem Ipsum.</p>
-            </div>
-            <div class="horror-bottom">
-                <div class="horror-item">
-                    <div></div>
-                    <h2>Make your nightmares a reality</h2>
-                    <p> Lorem Ipsum <!--Some text here describing the horror genre--> </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--End horror section-->
+  <!--ACTION section-->
+  <section id="action" class="movie-category">
+    <h1 class="section-title">Action</h1>
+    <!--Travis Some text here describing the category-->
+    <p class="section-subtittle">Edge of your seat action</p>
+    <div class="section-content">
+      <div class="movies-list"></div>
+    </div>
+  </section>
+  <!--End action section-->
 
-    <!--Comedy section-->
-    <section id="comedy">
-        <div class="comedy container">
-            <div class="comedy-top">
-                <h1 class="section-title">Com<span>e</span>dy</h1>
-                <p>Lorem Ipsum.</p>
-            </div>
-            <div class="comedy-bottom">
-                <div class="comedy-item">
-                    <div></div>
-                    <h2>Laugh till it hurts comedy</h2>
-                    <p> Lorem Ipsum <!--Some text here describing the comedy genre--> </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--End comedy section-->
+  <!--FAMILY section-->
+  <section id="family" class="movie-category">
+    <h1 class="section-title">Family</h1>
+    <!--Some text here describing the family category-->
+    <p class="section-subtittle">Movies the whole family will love</p>
+    <div class="section-content">
+      <div class="movies-list"></div>
+    </div>
+  </section>
+  <!--End family section-->
 
-    <!--Drama section-->
-    <section id="drama">
-        <div class="drama container">
-            <div class="drama-top">
-                <h1 class="section-title">Dr<span>a</span>ma</h1>
-                <p>Lorem Ipsum.</p>
-            </div>
-            <div class="drama-bottom">
-                <div class="drama-item">
-                    <div></div>
-                    <h2>Laugh, cry, rinse, repeat</h2>
-                    <p> Lorem Ipsum <!--Some text here describing the drama genre--> </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--End action section-->
-    <script src="app.js"></script>
+  <!--HORROR section-->
+  <section id="horror" class="movie-category">
+    <h1 class="section-title">Horror</h1>
+    <!--Some text here describing the category-->
+    <p class="section-subtittle">Make your nightmares a reality</p>
+    <div class="section-content">
+      <div class="movies-list"></div>
+    </div>
+  </section>
+  <!--End horror section-->
+
+  <!--COMEDY section-->
+  <section id="comedy" class="movie-category">
+    <h1 class="section-title">Comedy</h1>
+    <!--Some text here describing the category-->
+    <p class="section-subtittle">Laugh till it hurts comedy</p>
+    <div class="section-content">
+      <div class="movies-list"></div>
+    </div>
+  </section>
+  <!--End comedy section-->
+
+  <!--DRAMA section-->
+  <section id="drama" class="movie-category">
+    <h1 class="section-title">Drama</h1>
+    <!--Some text here describing the category-->
+    <p class="section-subtittle">Laugh, cry, rinse, repeat</p>
+    <div class="section-content">
+      <div class="movies-list"></div>
+    </div>
+  </section>
+
+  <!--End drama section-->
+  <p><em>Produced by Jocelyn, Jason, Travis and Sylvia </em></p>
+  <script src="app.js"></script>
 </body>
+
 </html>

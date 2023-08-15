@@ -1,16 +1,48 @@
 * {
-	padding: 0;
+
 	margin: 0;
-	box-sizing: border-box;
+	/* box-sizing: border-box; */
 }
 
 html {
-	font-size: 10px;
 	font-family: 'Montserrat', sans-serif;
 	scroll-behavior: smooth;
 	color: white;
 	background-color: #030b17;
 }
+
+.container {
+	/*min-height: 100vh;*/
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+
+p {
+	font-size: 1rem;
+	margin-top: 5px;
+	line-height: 2.5rem;
+	font-weight: 300;
+	letter-spacing: .05rem;
+}
+
+/*HEADER*/
+/*Brand*/
+/*Title Movie*/
+.brand h1 {
+	font-size: 2rem;
+	text-transform: uppercase;
+	color: white;
+}
+
+/*Brand First letter of Movies or any first letter that we want to put color*/
+.first-letter {
+	color: #5f1087;
+}
+
+
 
 .tittle-movies:hover {
 	color: #5f1087;
@@ -24,12 +56,16 @@ html {
 	background: none;
 }
 
+a {
+	text-decoration: none;
+}
+
 /*Tittle movie JJTS hover*/
 
 /* Initially hide the full name */
 .full-name {
 	opacity: 0;
-	font-size: 15px;
+	font-size: 1.3rem;
 	transition: opacity 0.2s ease-in-out;
 	/* Add a transition for smooth fading */
 }
@@ -46,34 +82,45 @@ html {
 
 /*end of movies JJTS hover*/
 
+/*First PAGE called HOME*/
 /*Find your next movie*/
-.trending-container {
+.home {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	min-height: 100vh;
 }
 
+/*Text find your next movie*/
 .text-find {
 	font-family: 'montserrat';
-	font-size: 28px;
+	font-size: 3.5rem;
 	text-align: left;
 	text-transform: uppercase;
-	letter-spacing: 2px;
-	line-height: 70px;
+	letter-spacing: .5rem;
+	line-height: 7rem;
 	text-decoration: none;
 	color: #faf7f7;
+	margin: 20px;
+	margin-bottom: 0;
+	position: absolute;
+	top: 190px;
 }
 
 /*end of find your next movie*/
 
-/*Browser Btn Animated*/
+/* Browser Btn Animated*/
 .browse-btn {
+	position: relative;
+	/* Add relative positioning */
 	display: block;
 	width: 220px;
 	height: 70px;
 	z-index: 1;
 	color: #5f1087;
+	margin-top: 90px;
+	/* Adjust margin here */
+	margin-left: 3rem;
 }
 
 .browse-btn:after {
@@ -117,7 +164,7 @@ body:after,
 	letter-spacing: 2px;
 	line-height: 70px;
 	font-family: 'raleway';
-	font-size: 28px;
+	font-size: 2rem;
 }
 
 /* motion for btn */
@@ -164,32 +211,36 @@ body:after,
 	}
 }
 
-/*End of Browser Btn Animated*/
+/*End of Browser Btn Animated */
+/*SEARCH BAR*/
 
-
-a {
-	text-decoration: none;
+.search {
+	margin-left: 3rem;
+	background-color: transparent;
+	border: 2px solid #e9e9ec;
+	border-radius: 50px;
+	color: #fff;
+	font-family: inherit;
+	font-size: 1rem;
+	padding: 0.5rem 1rem;
 }
 
-.container {
-	/*min-height: 100vh;*/
-	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+.search::placeholder {
+	color: #7378c5;
 }
 
-
-p {
-	font-size: 1.4rem;
-	margin-top: 5px;
-	line-height: 2.5rem;
-	font-weight: 300;
-	letter-spacing: .05rem;
+.search:focus {
+	background-color: #050505;
+	outline: none;
 }
 
+/*END SEARCH BAR*/
+/*END of HOME*/
+
+
+/*Second PAGE for every section Action, family, comedy, horror*/
 .section-title {
-	font-size: 4rem;
+	font-size: 2.5rem;
 	font-weight: 300;
 	margin-bottom: 10px;
 	text-transform: uppercase;
@@ -211,36 +262,73 @@ p {
 }
 
 /*end of section title with color*/
-.cta {
-	display: inline-block;
-	padding: 10px 30px;
-	color: white;
-	background-color: transparent;
-	border: 2px solid rgb(128, 0, 0);
-	font-size: 2rem;
-	text-transform: uppercase;
-	letter-spacing: .1rem;
-	margin-top: 30px;
-	transition: .3s ease;
-	transition-property: background-color, color;
+/*movies img*/
+/*how the img poster of movie is looking*/
+.movie img {
+	padding: 5px;
+	width: auto;
+	height: 350px;
 }
 
-.cta:hover {
-	color: white;
-	background-color: #5f1087";
+.movie {
+	background-color: #1c0c4e;
+	padding: 20px 10px 0 10px;
+	border-radius: 3px;
+}
+
+
+/*Applying to all movies category sections*/
+.movie-category {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	padding-top: 150px;
+	flex-direction: column;
+	text-align: center;
+}
+
+/*section content where movies are going to be display*/
+.section-content {
+	padding-bottom: 15px;
+	margin: 20px 50px;
+	overflow-x: auto;
+}
+
+.movies-list {
+	padding: 10px 10px 0 10px;
+	display: flex;
 
 }
 
-.brand h1 {
-	font-size: 3rem;
-	text-transform: uppercase;
-	color: white;
+
+
+/* Style the scrollbar */
+::-webkit-scrollbar {
+	width: 10px;
 }
 
-.brand h1 span {
-	color: #5f1087";
+/* Track */
+::-webkit-scrollbar-track {
+	background: #030b17;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #888;
+	border-radius: 50px;
+	border: 1px white solid;
 
 }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+
+/*end to configure how the poster of movies is looking*/
+
+
+
 
 
 /*Header hamburger section*/
@@ -265,7 +353,6 @@ p {
 	justify-content: space-between;
 	width: 100%;
 	height: 100%;
-
 	padding: 0 10px;
 }
 
@@ -284,21 +371,22 @@ p {
 	z-index: 1;
 	overflow-x: hidden;
 	transition: .3s ease left;
+	font-size: 1.3rem;
+
+
 
 }
 
-#header .nav-list ul.active {
-	left: 0%;
-}
+
 
 #header .nav-list ul a {
-	font-size: 2.5rem;
+
 	font-weight: 500;
-	letter-spacing: .2rem;
+	letter-spacing: .15rem;
 	text-decoration: none;
 	color: white;
 	text-transform: uppercase;
-	padding: 8px;
+	padding: .2rem;
 	display: flex;
 }
 
@@ -309,26 +397,28 @@ p {
 	left: 50%;
 	transform: translate(-50%, -50%) scale(0);
 	color: rgba(240, 248, 255, 0.021);
-	font-size: 10rem;
 	letter-spacing: 50px;
 	z-index: -1;
 	transition: .3s ease letter-spacing;
+
 
 }
 
 #header .nav-list ul li:hover a::after {
 	transform: translate(-50%, -50%) scale(1);
 	letter-spacing: initial;
+
 }
 
-#header .nav-list ul li:hover a {
-
+#header .nav-list ul li :hover {
 	background: linear-gradient(120deg, #5b0587, #ff0080, #ee3ce8);
 	background-size: 200% 200%;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-
+	font-size: 1.9rem;
+	/* Adjust the font size as desired */
 }
+
 
 
 #header .hamburger {
@@ -345,6 +435,7 @@ p {
 	cursor: pointer;
 	transform: scale(.8);
 	margin-right: 20px;
+
 
 
 }
@@ -380,6 +471,7 @@ p {
 	background-color: white;
 	transition: .3s ease;
 	transition-property: top, bottom;
+
 }
 
 #header .hamburger .bar::after {
@@ -398,462 +490,40 @@ p {
 	top: 0;
 }
 
+/* CSS code for hamburger when open */
+#header .nav-list ul.active {
+	left: 0%;
+}
+
+.nav-list ul li a.opened {
+
+	font-size: 2rem;
+	margin-bottom: 20px;
+
+}
+
+.nav-list ul li a.opened:hover {
+
+	font-size: 3rem;
+
+}
+
 /*End header Hamburger section*/
 
-/*Trending Section*/
-#trending {
 
-	background-size: cover;
-	background-position: top center;
-	position: relative;
-	z-index: 1;
-	display: flex;
-	flex-wrap: wrap;
-	padding-top: 110px;
-	background-color: #1c0c4e;
-	border-radius: 20px;
-	padding: 20px 10px 30px 10px;
-}
 
-/*how the img poster of movie is looking*/
-.movie img {
-	padding: 5px;
-	width: auto;
-	height: 350px;
-}
 
-.movie {
-	background-color: #1c0c4e;
-	padding: 20px 10px 0 10px;
-	border-radius: 3px;
-}
 
 
-#trending::after {
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 0;
-	height: 100%;
-	width: 100%;
-	background-color: black;
-	opacity: .1;
-	z-index: -1;
-}
 
-#trending .trending {
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 0 50px;
-	justify-content: flex-start;
-}
 
-#trending h3 {
-	display: block;
-	width: fit-content;
-	font-size: 1rem;
-	position: relative;
-	color: transparent;
-	animation: text-reveal .5s ease forwards;
-	animation-delay: 1s;
-}
 
-#trending h1:nth-child(1) {
-	animation-delay: 1s;
-}
-
-#trending h1:nth-child(2) {
-	animation-delay: 2s;
-}
-
-#trending h1:nth-child(3) {
-	animation: text-reveal-name .5s ease forwards;
-	animation-delay: 3s;
-}
-
-#trending h1 span {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 0;
-	background-color: purple;
-	animation: text-reveal-box 1s ease;
-	animation-delay: .3s;
-}
-
-#trending h1:nth-child(1) span {
-	animation-delay: .5s;
-}
-
-#trending h1:nth-child(2) span {
-	animation-delay: 1.5s;
-}
-
-#trending h1:nth-child(3) span {
-	animation-delay: 2.5s;
-}
-
-/*End trending section*/
-
-/*Applying to all movies category sections*/
-.movie-category {
-	min-height: 100vh;
-	display: flex;
-	justify-content: center;
-	padding-top: 150px;
-	flex-direction: column;
-	text-align: center;
-}
-
-/*Action section*/
-
-#action .action-top {
-	max-width: 500px;
-}
-
-.section-content {
-	padding-bottom: 15px;
-	margin: 20px 50px;
-	overflow-x: auto;
-}
-
-.movies-list {
-	padding: 10px 10px 0 10px;
-	display: flex;
-
-}
-
-/* Style the scrollbar */
-::-webkit-scrollbar {
-	width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-	background: #030b17;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-	background: #888;
-	border-radius: 50px;
-	border: 1px white solid;
-
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-	background: #555;
-}
-
-/*End action section*/
-
-/*Family section*/
-
-#family .family {
-	flex-direction: column;
-	text-align: center;
-	max-width: 1500px;
-	margin: 0 auto;
-	padding: 100px 0;
-}
-
-#family .family-top {
-	max-width: 500px;
-	margin: 0 auto;
-}
-
-#family .family-bottom {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-wrap: wrap;
-	margin-top: 50px;
-}
-
-#family .family-item {
-
-	display: flex;
-	align-items: flex-start;
-	justify-content: center;
-	flex-direction: column;
-	padding: 30px;
-	border-radius: 10px;
-	background-color: black;
-	background-size: cover;
-	margin: 10px 5%;
-	position: relative;
-	z-index: 1;
-	overflow: hidden;
-}
-
-#family .family-item::after {
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 0;
-	height: 100%;
-	width: 100%;
-	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-	opacity: 0.9;
-	z-index: -1;
-}
-
-#family .family-item h2 {
-	font-size: 2rem;
-	color: white;
-	margin-bottom: 10px;
-	text-transform: uppercase;
-}
-
-#family .family-item p {
-	color: white;
-	text-align: left;
-}
-
-/*End family section*/
-
-/*Horror section*/
-
-#horror .horror {
-	flex-direction: column;
-	text-align: center;
-	max-width: 1500px;
-	margin: 0 auto;
-	padding: 100px 0;
-}
-
-#horror .horror-top {
-	max-width: 500px;
-	margin: 0 auto;
-}
-
-#horror .horror-bottom {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-wrap: wrap;
-	margin-top: 50px;
-}
-
-#horror .horror-item {
-
-	display: flex;
-	align-items: flex-start;
-	justify-content: center;
-	flex-direction: column;
-	padding: 30px;
-	border-radius: 10px;
-	background-color: black;
-	background-size: cover;
-	margin: 10px 5%;
-	position: relative;
-	z-index: 1;
-	overflow: hidden;
-}
-
-#horror .horror-item::after {
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 0;
-	height: 100%;
-	width: 100%;
-	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-	opacity: 0.9;
-	z-index: -1;
-}
-
-#horror .horror-item h2 {
-	font-size: 2rem;
-	color: white;
-	margin-bottom: 10px;
-	text-transform: uppercase;
-}
-
-#horror .horror-item p {
-	color: white;
-	text-align: left;
-}
-
-/*End horror section*/
-
-/*Comedy section*/
-
-#comedy .comedy {
-	flex-direction: column;
-	text-align: center;
-	max-width: 1500px;
-	margin: 0 auto;
-	padding: 100px 0;
-}
-
-#comedy .comedy-top {
-	max-width: 500px;
-	margin: 0 auto;
-}
-
-#comedy .comedy-bottom {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-wrap: wrap;
-	margin-top: 50px;
-}
-
-#comedy .comedy-item {
-
-	display: flex;
-	align-items: flex-start;
-	justify-content: center;
-	flex-direction: column;
-	padding: 30px;
-	border-radius: 10px;
-	background-color: black;
-	background-size: cover;
-	margin: 10px 5%;
-	position: relative;
-	z-index: 1;
-	overflow: hidden;
-}
-
-#comedy .comedy-item::after {
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 0;
-	height: 100%;
-	width: 100%;
-	background-image: linear-gradient(60deg, #374658 0%, #485563 100%);
-	opacity: 0.9;
-	z-index: -1;
-}
-
-#comedy .comedy-item h2 {
-	font-size: 2rem;
-	color: white;
-	margin-bottom: 10px;
-	text-transform: uppercase;
-}
-
-#comedy .comedy-item p {
-	color: white;
-	text-align: left;
-}
-
-/*End comedy section*/
-
-/*Drama section*/
-
-#drama .drama {
-	flex-direction: column;
-	text-align: center;
-	max-width: 1500px;
-	margin: 0 auto;
-	padding: 100px 0;
-}
-
-#drama .drama-top {
-	max-width: 500px;
-	margin: 0 auto;
-}
-
-#drama .drama-bottom {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-wrap: wrap;
-	margin-top: 50px;
-}
-
-#drama .drama-item {
-
-	display: flex;
-	align-items: flex-start;
-	justify-content: center;
-	flex-direction: column;
-	padding: 30px;
-	border-radius: 10px;
-	background-color: black;
-	background-size: cover;
-	margin: 10px 5%;
-	position: relative;
-	z-index: 1;
-	overflow: hidden;
-}
-
-#drama .drama-item::after {
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 0;
-	height: 100%;
-	width: 100%;
-	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-	opacity: 0.9;
-	z-index: -1;
-}
-
-#drama .drama-item h2 {
-	font-size: 2rem;
-	color: white;
-	margin-bottom: 10px;
-	text-transform: uppercase;
-}
-
-#drama .drama-item p {
-	color: white;
-	text-align: left;
-}
-
-/*End drama section*/
-
-
-/*Keyframes*/
-
-@keyframes text-reveal-box {
-	50% {
-		width: 100%;
-		left: 0;
-	}
-
-	100% {
-		width: 0;
-		left: 100%;
-	}
-}
-
-@keyframes text-reveal {
-	100% {
-		color: white;
-	}
-}
-
-@keyframes text-reveal-name {
-	100% {
-		color: purple;
-		font-weight: 500px;
-	}
-}
-
-/*End keyframes*/
-
-/*Media query for tablet*/
+/*MEDIA QUERY FOR TABLET*/
 
 @media only screen and (min-width: 768px) {
 	.cta {
-		font-size: 2.5rem;
+
 		padding: 20px 60px;
-	}
-
-	h1 .section-title {
-		font-size: 6rem;
-	}
-
-	/*trending*/
-	#trending h1 {
-		font-size: 7rem;
 	}
 
 	/*End trending*/
@@ -869,13 +539,13 @@ p {
 
 }
 
-/*End media query for tablet*/
+/*END media query for tablet*/
 
 
 
 
 
-/*Media query for desktop*/
+/*MEDIA QUERY FOR DESKTOP*/
 @media only screen and (min-width: 1400px) {
 	/*Header*/
 
@@ -895,6 +565,7 @@ p {
 
 	#header .nav-list ul li {
 		display: inline-block;
+
 	}
 
 	#header .nav-list ul a::after {
@@ -905,4 +576,4 @@ p {
 
 }
 
-/*End media query for desktop*/
+/*END media query for desktop*/

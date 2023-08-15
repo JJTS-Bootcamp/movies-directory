@@ -306,7 +306,7 @@ body:after,
 	min-height: 100vh;
 	display: flex;
 	justify-content: center;
-	padding-top: 150px;
+	padding-top: 80px;
 	flex-direction: column;
 	text-align: center;
 }

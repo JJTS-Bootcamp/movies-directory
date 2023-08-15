@@ -1,7 +1,5 @@
 * {
-
 	margin: 0;
-	/* box-sizing: border-box; */
 }
 
 html {
@@ -17,6 +15,8 @@ html {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+
+
 }
 
 
@@ -108,19 +108,18 @@ a {
 }
 
 /*end of find your next movie*/
-
+/*BROWSE btn but now is going to say search instead of browser*/
 /* Browser Btn Animated*/
 .browse-btn {
-	position: relative;
-	/* Add relative positioning */
 	display: block;
 	width: 220px;
 	height: 70px;
 	z-index: 1;
+
+	top: 35rem;
+	left: 13.5rem;
+
 	color: #5f1087;
-	margin-top: 90px;
-	/* Adjust margin here */
-	margin-left: 3rem;
 }
 
 .browse-btn:after {
@@ -142,6 +141,13 @@ a {
 	animation: gradient 3s ease-in-out infinite;
 }
 
+.browse-btn:after,
+.browse-btn>span {
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
 /* helpers for btn*/
 
 .absolute-centering,
@@ -149,11 +155,9 @@ body:after,
 .browse-btn,
 .browse-btn:after {
 	position: absolute;
-	top: 0;
-	left: 0;
 	right: 0;
 	bottom: 0;
-	margin: auto;
+
 }
 
 .text-formatting,
@@ -164,10 +168,15 @@ body:after,
 	letter-spacing: 2px;
 	line-height: 70px;
 	font-family: 'raleway';
-	font-size: 2rem;
+	font-size: 28px;
 }
 
-/* motion for btn */
+.text-formatting:hover,
+.browse-btn:hover {
+	color: #ff7159;
+	/* Set the color of the text when hovering */
+}
+
 
 @-moz-keyframes gradient {
 	0% {
@@ -212,18 +221,25 @@ body:after,
 }
 
 /*End of Browser Btn Animated */
+
 /*SEARCH BAR*/
 
 .search {
-	margin-left: 3rem;
+	margin-left: 2rem;
+	margin-top: 1rem;
 	background-color: transparent;
 	border: 2px solid #e9e9ec;
-	border-radius: 50px;
+	border-radius: 0px;
 	color: #fff;
 	font-family: inherit;
 	font-size: 1rem;
-	padding: 0.5rem 1rem;
+	padding: 0.5rem 5.5rem;
+	position: absolute;
+	position: absolute;
+	top: 40rem;
+	left: 0;
 }
+
 
 .search::placeholder {
 	color: #7378c5;
@@ -246,6 +262,7 @@ body:after,
 	text-transform: uppercase;
 	letter-spacing: .2rem;
 	text-align: center;
+
 }
 
 /*section title with color*/

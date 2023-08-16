@@ -221,7 +221,7 @@ body:after,
 }
 
 /*End of Browser Btn Animated */
-
+/*Search browser btn after*/
 /*SEARCH BAR*/
 
 .search {
@@ -255,6 +255,23 @@ body:after,
 }
 
 /*END SEARCH BAR*/
+/*container were we will see later the movies from the search*/
+#results-container {
+	display: none;
+}
+
+/*search section movies*/
+.results-category {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+
+	flex-direction: column;
+	text-align: center;
+}
+
+/*END of SEARCH Section*/
+/*END of search*/
 /*END of HOME*/
 
 
@@ -297,17 +314,7 @@ body:after,
 	border-radius: 3px;
 }
 
-/*search section movies*/
-.results-category {
-	min-height: 100vh;
-	display: flex;
-	justify-content: center;
 
-	flex-direction: column;
-	text-align: center;
-}
-
-/*END of SEARCH Section*/
 /*Applying to all movies category sections*/
 .movie-category {
 	min-height: 100vh;

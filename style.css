@@ -101,12 +101,9 @@ a {
 	line-height: 200%;
 	text-decoration: none;
 	color: #faf7f7;
-	margin: 20px;
-	margin-bottom: 0;
-	position: absolute;
-	top: 190px;
-
-
+	margin-left: 20px;
+	margin-top: 10%;
+	min-height: 90vh;
 }
 
 /*end of find your next movie*/
@@ -300,7 +297,17 @@ body:after,
 	border-radius: 3px;
 }
 
+/*search section movies*/
+.results-category {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
 
+	flex-direction: column;
+	text-align: center;
+}
+
+/*END of SEARCH Section*/
 /*Applying to all movies category sections*/
 .movie-category {
 	min-height: 100vh;
@@ -310,6 +317,9 @@ body:after,
 	flex-direction: column;
 	text-align: center;
 }
+
+
+
 
 /*section content where movies are going to be display*/
 .section-content {
@@ -537,12 +547,13 @@ body:after,
 
 
 
-
+/*adjust for screens*/
 
 @media (max-width: 860px) {
 	.text-find {
 		white-space: nowrap;
 		font-size: 220%;
+		margin-top: 30%;
 	}
 
 	.browse-btn {

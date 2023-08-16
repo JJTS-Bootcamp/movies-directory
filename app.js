@@ -289,8 +289,13 @@ document.addEventListener("DOMContentLoaded", async () => {
 /*SEARCH BAR*/
 function toggleSearchBox() {
   const searchBox = document.getElementById("searchBox");
+  const resultsContainer = document.getElementById("results-container");
   searchBox.style.display =
     searchBox.style.display === "none" ? "block" : "none";
+
+  if (searchBox.style.display === "none") {
+    resultsContainer.style.display = "none";
+  }
 }
 
 // Define the searchMovies function in the global scope

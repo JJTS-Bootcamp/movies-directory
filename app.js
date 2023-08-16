@@ -285,7 +285,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 });
 //END OF DRAMA MOVIES SECTION//
-
+/*all of search*/
 /*SEARCH BAR*/
 function toggleSearchBox() {
   const searchBox = document.getElementById("searchBox");
@@ -306,7 +306,7 @@ function searchMovies() {
   const apiKey = "c7ca505670cee9f71026a8900d9e5f33";
   const apiUrl = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${searchQuery}`;
 
-  console.log(searchInput.value);
+  console.log(searchInput.value); //this was to check if the search bar was working, how many letters were typed in
 
   fetch(apiUrl)
     .then((response) => response.json())
@@ -316,7 +316,7 @@ function searchMovies() {
       if (movies.length > 0) {
         displayMovies(movies); // Call the displayMovies function to show the movies
       } else {
-        moviesContainer.style.display = "none";
+        moviesContainer.style.display = "none"; // Hide the movies container if nothing was found
       }
     })
     .catch((error) => console.error(error));

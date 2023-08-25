@@ -15,20 +15,20 @@
       <!--Trying to make when click on Movies JJTS go to home where appears find your next movie-->
       <div class="nav-bar">
         <div class="brand">
-          <a href="#find-my-movies" data-after="header">
-            <div class="tittle-movies">
+          <div class="tittle-movies">
+            <a href="#" data-after="header container">
               <h1>
-                <span style="color: #5f1087">M</span>ovies
+                <span class="first-letter">M</span>ovies
                 <span class="short-name" style="color: #5f1087">JJTS</span>
                 <span class="full-name" title="Joyful Journey Tech Studios">Joyful Journey Tech Studios</span>
                 <!--This is the full name of the company if H4 will put in under the title movies-->
               </h1>
-            </div>
-          </a>
+            </a>
+          </div>
         </div>
 
         <div class="nav-list">
-          <div class="hamburger">
+          <div class="hamburger" id="hamburger">
             <div class="bar"></div>
           </div>
           <ul>
@@ -45,20 +45,44 @@
   </section>
   <!--End header-->
 
-  <!--Trending section-->
-  <div class="trending-container">
-    <div class="text-find">
-      <h1>Find<span></span></h1>
-      <h1>Your Next<span></span></h1>
-      <h1 style="color: #5f1087">Movie<span></span></h1>
-    </div>
-    <!--<div style="position: relative;">-->
-    <div class="browser-wrapper">
-      <a href="#search" type="button" class="browse-btn">Browse</a>
+  <!--Trending section or FIRST PAGE called home-->
+
+  <div class="text-find">
+    <div class="">
+      <h1>Find</h1>
+      <h1>Your Next</h1>
+      <h1 style="color: #5f1087">Movie</h1>
     </div>
   </div>
+  <!--<div style="position: relative;">-->
+  <a href="#" type="button" class="browse-btn" id="browse-btn" onclick="toggleSearchBox()">Search</a>
+  <div id="searchBox" style="display: none;">
+    <input type="text" placeholder="Search..." id="search-input" class="search" onchange="searchMovies()" />
+  </div>
 
-  <section id="trending"></section>
+  <section id="results-container" class="results-category">
+    <h1 class="section-title">Search Results</h1>
+    <div class="section-content">
+      <div class="movies-list"></div>
+    </div>
+  </section>
+
+
+
+  <!--CAROUSEL with 5 movies-->
+
+  <!--END OF CAROUSEL-->
+
+
+  <!--Trending for 20 movies section-->
+  <section id="trending" class="movie-category">
+    <h1 class="section-title">trending</h1>
+    <!--Travis Some text here describing the category-->
+    <p class="section-subtittle">Top 20 Movies </p>
+    <div class="section-content">
+      <div class="movies-list"></div>
+    </div>
+  </section>
   <!--End trending section-->
 
   <!--ACTION section-->
@@ -116,7 +140,13 @@
   </section>
 
   <!--End drama section-->
-  <p><em>Produced by Jocelyn, Jason, Travis and Sylvia </em></p>
+
+  <!--Footer-->
+  <footer>
+    <h2>Movie JJTS "Joyful Journey Tech Studios"</h2>
+    <p><em>Produced by Jocelyn, Jason, Travis and Sylvia.</em></p>
+  </footer>
   <script src="app.js"></script>
+
 </body>
 </html>

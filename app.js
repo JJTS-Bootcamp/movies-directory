@@ -1,34 +1,28 @@
-const hamburger = document.querySelector(
-  ".header .nav-bar .nav-list .hamburger"
-);
-const mobile_menu = document.querySelector(".header .nav-bar .nav-list ul");
-const menu_item = document.querySelectorAll(
-  ".header .nav-bar .nav-list ul li a"
-);
-const header = document.querySelector(".header.container");
+// Hamburger menu icon
+const hamburger = document.querySelector(".hamburger");
+const mobileMenu = document.querySelector(".nav-list ul");
+const menuItems = document.querySelectorAll(".nav-list ul li a");
 
-hamburger.addEventListener("click", () => {
+hamburger.addEventListener("click", function () {
   hamburger.classList.toggle("active");
-  mobile_menu.classList.toggle("active");
-});
-
-document.addEventListener("scroll", () => {
-  var scroll_position = window.scrollY;
-  if (scroll_position > 250) {
-    header.style.backgroundColor = "#0c003b";
-  } else {
-    header.style.backgroundColor = "transparent";
-  }
-});
-
-menu_item.forEach((item) => {
-  item.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    mobile_menu.classList.toggle("active");
+  mobileMenu.classList.toggle("active");
+  menuItems.forEach((item) => {
+    item.classList.toggle("opened");
   });
 });
 
-//MOVIEDB API SECTION//
+// JavaScript code for adding event listener to navigation links
+menuItems.forEach((item) => {
+  item.addEventListener("click", function () {
+    hamburger.classList.remove("active");
+    mobileMenu.classList.remove("active");
+    menuItems.forEach((item) => {
+      item.classList.remove("opened");
+    });
+  });
+});
+
+//MOVIE API SECTION//
 
 const API_KEY = "c7ca505670cee9f71026a8900d9e5f33";
 const TRENDING_API_URL =
@@ -36,8 +30,9 @@ const TRENDING_API_URL =
 const API_URL = "https://api.themoviedb.org/3/discover/movie";
 const IMG_PATH = "https://image.tmdb.org/t/p/w1280";
 
-//TRENDING MOVIES SECTION//
+//TRENDING MOVIES SECTION  WITH CAROUSEL//
 
+//POPULAR MOVIES SECTION//
 async function fetchTrendingMovies() {
   try {
     const response = await fetch(TRENDING_API_URL);
@@ -50,8 +45,9 @@ async function fetchTrendingMovies() {
 }
 
 function displayTrendingMovies(movies) {
-  const trendingSection = document.getElementById("trending");
-  trendingSection.innerHTML = "";
+  const popularSection = document.getElementById("trending");
+  const moviesList = popularSection.querySelector(".movies-list");
+  moviesList.innerHTML = ""; // clear out the existing movies
 
   movies.forEach((movie) => {
     const { poster_path, title } = movie;
@@ -61,7 +57,7 @@ function displayTrendingMovies(movies) {
         <img src="${IMG_PATH + poster_path}" alt="${title}" />
         <h3>${title}</h3>
       `;
-    trendingSection.appendChild(movieElement);
+    moviesList.appendChild(movieElement);
   });
 }
 
@@ -73,7 +69,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error("Error loading trending movies:", error);
   }
 });
-//END OF TRENDING MOVIES SECTION//
+//END of POPULAR MOVIES SECTION//
 
 //ACTION MOVIES SECTION//
 
@@ -289,3 +285,78 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 });
 //END OF DRAMA MOVIES SECTION//
+/*all of search*/
+/*SEARCH BAR*/
+function toggleSearchBox() {
+  const searchBox = document.getElementById("searchBox");
+  const resultsContainer = document.getElementById("results-container");
+  searchBox.style.display =
+    searchBox.style.display === "none" ? "block" : "none";
+
+  if (searchBox.style.display === "none") {
+    resultsContainer.style.display = "none";
+  }
+}
+
+// Define the searchMovies function in the global scope
+function searchMovies() {
+  const searchInput = document.getElementById("search-input");
+  const moviesContainer = document.getElementById("results-container");
+  const searchQuery = searchInput.value;
+  const apiKey = "c7ca505670cee9f71026a8900d9e5f33";
+  const apiUrl = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${searchQuery}`;
+
+  console.log(searchInput.value); //this was to check if the search bar was working, how many letters were typed in
+
+  fetch(apiUrl)
+    .then((response) => response.json())
+    .then((data) => {
+      const movies = data.results;
+
+      if (movies.length > 0) {
+        displayMovies(movies); // Call the displayMovies function to show the movies
+      } else {
+        moviesContainer.style.display = "none"; // Hide the movies container if nothing was found
+      }
+    })
+    .catch((error) => console.error(error));
+}
+
+function displayMovies(movies) {
+  const moviesContainer = document.getElementById("results-container");
+  const moviesList = moviesContainer.querySelector(".movies-list");
+  moviesList.innerHTML = ""; // Clear the container before adding new movies
+
+  moviesContainer.style.display = "flex";
+
+  movies.forEach((movie) => {
+    const movieElement = document.createElement("div");
+    movieElement.classList.add("movie");
+
+    const movieTitle = document.createElement("h2");
+    movieTitle.textContent = movie.title;
+
+    const movieOverview = document.createElement("p");
+    movieOverview.textContent = movie.overview;
+
+    const moviePoster = document.createElement("img");
+    moviePoster.src = `https://image.tmdb.org/t/p/w1280${movie.poster_path}`;
+    moviePoster.alt = movie.title;
+
+    // movieElement.appendChild(movieOverview);
+    movieElement.appendChild(moviePoster);
+    movieElement.appendChild(movieTitle);
+
+    moviesList.appendChild(movieElement);
+  });
+
+  moviesContainer.scrollIntoView();
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const searchForm = document.getElementById("search-form");
+  searchForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+  });
+});
+/*END OF SEARCH MOVIES SECTION*/

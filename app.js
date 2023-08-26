@@ -353,10 +353,4 @@ function displayMovies(movies) {
   moviesContainer.scrollIntoView();
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const searchForm = document.getElementById("search-form");
-  searchForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-  });
-});
 /*END OF SEARCH MOVIES SECTION*/

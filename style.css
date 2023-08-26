@@ -1,83 +1,78 @@
 * {
-	margin: 0;
+  margin: 0;
 }
 
 html {
-	font-family: 'Montserrat', sans-serif;
-	scroll-behavior: smooth;
-	color: white;
-	background-color: #030b17;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+  color: white;
+  background-color: #030b17;
 }
 
 .container {
-	/*min-height: 100vh;*/
-	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-
-
+  /*min-height: 100vh;*/
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-
 p {
-	font-size: 1rem;
-	margin-top: 5px;
-	line-height: 2.5rem;
-	font-weight: 300;
-	letter-spacing: .05rem;
+  font-size: 1rem;
+  margin-top: 5px;
+  line-height: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 0.05rem;
 }
 
 /*HEADER*/
 /*Brand*/
 /*Title Movie*/
 .brand h1 {
-	font-size: 2rem;
-	text-transform: uppercase;
-	color: white;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: white;
 }
 
 /*Brand First letter of Movies or any first letter that we want to put color*/
 .first-letter {
-	color: #5f1087;
+  color: #5f1087;
 }
 
-
-
 .tittle-movies:hover {
-	color: #5f1087;
-	background: linear-gradient(120deg, #5b0587, #ff0080, #ee3ce8);
-	background-size: 400% 400%;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+  color: #5f1087;
+  background: linear-gradient(120deg, #5b0587, #ff0080, #ee3ce8);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .tittle-movies:hover::after {
-	background: none;
+  background: none;
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 /*Tittle movie JJTS hover*/
 
 /* Initially hide the full name */
 .full-name {
-	opacity: 0;
-	font-size: 1.3rem;
-	transition: opacity 0.2s ease-in-out;
-	/* Add a transition for smooth fading */
+  opacity: 0;
+  font-size: 1.3rem;
+  transition: opacity 0.2s ease-in-out;
+  /* Add a transition for smooth fading */
 }
 
 /* Show the full name when hovering over the short name */
-.short-name:hover+.full-name {
-	opacity: 1;
+.short-name:hover + .full-name {
+  opacity: 1;
 }
 
 /* Hide the short name when hovering over it */
 .short-name:hover {
-	opacity: 0;
+  opacity: 0;
 }
 
 /*end of movies JJTS hover*/
@@ -93,58 +88,70 @@ a {
 
 /*Text find your next movie*/
 .text-find {
-	font-family: 'montserrat';
-	font-size: 4rem;
-	text-align: left;
-	text-transform: uppercase;
-	letter-spacing: 1%;
-	line-height: 200%;
-	text-decoration: none;
-	color: #faf7f7;
-	margin-left: 20px;
-	margin-top: 10%;
-	min-height: 90vh;
+  font-family: "montserrat";
+  font-size: 3rem;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 1%;
+  line-height: 150%;
+  text-decoration: none;
+  color: #faf7f7;
+  margin-left: 20px;
+  margin-top: 10%;
+  min-height: 90vh;
 }
 
 /*end of find your next movie*/
 /*BROWSE btn but now is going to say search instead of browser*/
 /* Browser Btn Animated*/
 .browse-btn {
-	display: block;
-	width: 220px;
-	height: 70px;
-	z-index: 1;
+  display: block;
+  width: 220px;
+  height: 70px;
+  z-index: 1;
 
-	top: 45%;
-	left: 1.5rem;
+  top: 45%;
+  left: 1.5rem;
 
-	color: #6559ae;
+  color: #6559ae;
 }
 
 .browse-btn:after {
-	content: '';
-	background: linear-gradient(120deg, #6559ae, #ff7159, #6559ae);
-	background-size: 400% 400%;
-	-webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 4px, 216px 4px, 216px 66px, 4px 66px, 4px 100%, 100% 100%, 100% 0%, 0% 0%);
-	-webkit-animation: gradient 3s ease-in-out infinite, border 1s forwards ease-in-out reverse;
+  content: "";
+  background: linear-gradient(120deg, #6559ae, #ff7159, #6559ae);
+  background-size: 400% 400%;
+  -webkit-clip-path: polygon(
+    0% 100%,
+    4px 100%,
+    4px 4px,
+    216px 4px,
+    216px 66px,
+    4px 66px,
+    4px 100%,
+    100% 100%,
+    100% 0%,
+    0% 0%
+  );
+  -webkit-animation: gradient 3s ease-in-out infinite,
+    border 1s forwards ease-in-out reverse;
 }
 
-.browse-btn>span {
-	display: block;
-	background: linear-gradient(120deg, #6559ae, #ff7159, #6559ae);
-	background-size: 100%;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	-moz-animation: gradient 3s ease-in-out infinite;
-	-webkit-animation: gradient 3s ease-in-out infinite;
-	animation: gradient 3s ease-in-out infinite;
+.browse-btn > span {
+  display: block;
+  background: linear-gradient(120deg, #6559ae, #ff7159, #6559ae);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-animation: gradient 3s ease-in-out infinite;
+  -webkit-animation: gradient 3s ease-in-out infinite;
+  animation: gradient 3s ease-in-out infinite;
 }
 
 .browse-btn:after,
-.browse-btn>span {
-	position: relative;
-	top: 0;
-	left: 0;
+.browse-btn > span {
+  position: relative;
+  top: 0;
+  left: 0;
 }
 
 /* helpers for btn*/
@@ -153,71 +160,69 @@ a {
 body:after,
 .browse-btn,
 .browse-btn:after {
-	position: absolute;
-	right: 0;
-	bottom: 0;
-
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
 .text-formatting,
 .browse-btn {
-	text-transform: uppercase;
-	text-decoration: none;
-	text-align: center;
-	letter-spacing: 2px;
-	line-height: 70px;
-	color: #6559ae;
-	font-size: 28px;
-	font-family: verdana;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: 2px;
+  line-height: 70px;
+  color: #6559ae;
+  font-size: 28px;
+  font-family: verdana;
 }
 
 .text-formatting:hover,
 .browse-btn:hover {
-	color: #ff7159;
-	/* Set the color of the text when hovering */
+  color: #ff7159;
+  /* Set the color of the text when hovering */
 }
 
-
 @-moz-keyframes gradient {
-	0% {
-		background-position: 14% 0%;
-	}
+  0% {
+    background-position: 14% 0%;
+  }
 
-	50% {
-		background-position: 87% 100%;
-	}
+  50% {
+    background-position: 87% 100%;
+  }
 
-	100% {
-		background-position: 14% 0%;
-	}
+  100% {
+    background-position: 14% 0%;
+  }
 }
 
 @-webkit-keyframes gradient {
-	0% {
-		background-position: 14% 0%;
-	}
+  0% {
+    background-position: 14% 0%;
+  }
 
-	50% {
-		background-position: 87% 100%;
-	}
+  50% {
+    background-position: 87% 100%;
+  }
 
-	100% {
-		background-position: 14% 0%;
-	}
+  100% {
+    background-position: 14% 0%;
+  }
 }
 
 @keyframes gradient {
-	0% {
-		background-position: 14% 0%;
-	}
+  0% {
+    background-position: 14% 0%;
+  }
 
-	50% {
-		background-position: 87% 100%;
-	}
+  50% {
+    background-position: 87% 100%;
+  }
 
-	100% {
-		background-position: 14% 0%;
-	}
+  100% {
+    background-position: 14% 0%;
+  }
 }
 
 /*End of Browser Btn Animated */
@@ -225,411 +230,370 @@ body:after,
 /*SEARCH BAR*/
 
 .search {
-	margin-left: 1.5rem;
-	margin-top: 1rem;
-	background-color: transparent;
-	border: 2px solid #e9e9ec;
-	border-radius: 0px;
-	color: #fff;
-	font-family: inherit;
-	font-size: 1rem;
-	position: absolute;
-	top: 50%;
-	font-family: verdana;
-	text-align: left;
-	line-height: 2rem;
-	padding-left: 1rem;
-	/*paddin inside text*/
-	min-width: 350px;
-	max-width: 1810px;
+  margin-left: 1.5rem;
+  margin-top: 2rem;
+  background-color: transparent;
+  border: 2px solid #e9e9ec;
+  border-radius: 0px;
+  color: #fff;
+  font-family: inherit;
+  font-size: 1rem;
+  position: absolute;
+  top: 50%;
+  font-family: verdana;
+  text-align: left;
+  line-height: 2rem;
+  padding-left: 1rem;
+  /*paddin inside text*/
+  min-width: 350px;
+  max-width: 1810px;
 }
 
-
 .search::placeholder {
-	color: #7378c5;
+  color: #7378c5;
 }
 
 .search:focus {
-	background-color: #050505;
-	outline: none;
+  background-color: #050505;
+  outline: none;
 }
 
 /*END SEARCH BAR*/
 /*container were we will see later the movies from the search*/
 #results-container {
-	display: none;
+  display: none;
 }
 
 /*search section movies*/
 .results-category {
-	min-height: 100vh;
-	display: flex;
-	justify-content: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
 
-	flex-direction: column;
-	text-align: center;
+  flex-direction: column;
+  text-align: center;
 }
 
 /*END of SEARCH Section*/
 /*END of search*/
 /*END of HOME*/
 
-
 /*Second PAGE for every section Action, family, comedy, horror*/
 .section-title {
-	font-size: 2.5rem;
-	font-weight: 300;
-	margin-bottom: 10px;
-	text-transform: uppercase;
-	letter-spacing: .2rem;
-	text-align: center;
-
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-align: center;
 }
 
 /*section title with color*/
 .section-title {
-	color: #5f1087;
+  color: #5f1087;
 }
 
 .section-title:hover {
-	color: #5f1087;
-	background: linear-gradient(120deg, #5b0587, #ff0080, #ee3ce8);
-	background-size: 200% 200%;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+  color: #5f1087;
+  background: linear-gradient(120deg, #5b0587, #ff0080, #ee3ce8);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /*end of section title with color*/
 /*movies img*/
 /*how the img poster of movie is looking*/
 .movie img {
-	padding: 5px;
-	width: auto;
-	height: 350px;
+  padding: 5px;
+  width: auto;
+  height: 350px;
 }
 
 .movie {
-	background-color: #1c0c4e;
-	padding: 20px 10px 0 10px;
-	border-radius: 3px;
+  background-color: #1c0c4e;
+  padding: 20px 10px 0 10px;
+  border-radius: 3px;
 }
-
 
 /*Applying to all movies category sections*/
 .movie-category {
-	min-height: 100vh;
-	display: flex;
-	justify-content: center;
-	padding-top: 80px;
-	flex-direction: column;
-	text-align: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding-top: 80px;
+  flex-direction: column;
+  text-align: center;
 }
-
-
-
 
 /*section content where movies are going to be display*/
 .section-content {
-	padding-bottom: 15px;
-	margin: 20px 50px;
-	overflow-x: auto;
+  padding-bottom: 15px;
+  margin: 20px 50px;
+  overflow-x: auto;
 }
 
 .movies-list {
-	padding: 10px 10px 0 10px;
-	display: flex;
-
+  padding: 10px 10px 0 10px;
+  display: flex;
 }
-
-
 
 /* Style the scrollbar */
 ::-webkit-scrollbar {
-	width: 10px;
+  width: 10px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-	background: #030b17;
+  background: #030b17;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-	background: #888;
-	border-radius: 50px;
-	border: 1px white solid;
-
+  background: #888;
+  border-radius: 50px;
+  border: 1px white solid;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-	background: #555;
+  background: #555;
 }
 
 /*end to configure how the poster of movies is looking*/
 
-
-
-
-
 /*Header hamburger section*/
 #header {
-	position: fixed;
-	z-index: 1000;
-	left: 0;
-	top: 0;
-	width: 100vw;
-	height: auto;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: auto;
 }
 
 #header .header {
-	min-height: 8vh;
-	background-color: rgba(31, 30, 30, 0.24);
-	transition: .3s ease background-color;
+  min-height: 8vh;
+  background-color: rgba(31, 30, 30, 0.24);
+  transition: 0.3s ease background-color;
 }
 
 #header .nav-bar {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	width: 100%;
-	height: 100%;
-	padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
 }
 
 #header .nav-list ul {
-	list-style: none;
-	position: absolute;
-	background-color: rgb(31, 30, 30);
-	width: 100vw;
-	height: 100vh;
-	left: 100%;
-	top: 0;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	z-index: 1;
-	overflow-x: hidden;
-	transition: .3s ease left;
-	font-size: 1.3rem;
-
-
-
+  list-style: none;
+  position: absolute;
+  background-color: rgb(31, 30, 30);
+  width: 100vw;
+  height: 100vh;
+  left: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  overflow-x: hidden;
+  transition: 0.3s ease left;
+  font-size: 1.3rem;
 }
 
-
-
 #header .nav-list ul a {
-
-	font-weight: 500;
-	letter-spacing: .15rem;
-	text-decoration: none;
-	color: white;
-	text-transform: uppercase;
-	padding: .2rem;
-	display: flex;
+  font-weight: 500;
+  letter-spacing: 0.15rem;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  padding: 0.2rem;
+  display: flex;
 }
 
 #header .nav-list ul a::after {
-	content: attr(data-after);
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%) scale(0);
-	color: rgba(240, 248, 255, 0.021);
-	letter-spacing: 50px;
-	z-index: -1;
-	transition: .3s ease letter-spacing;
-
-
+  content: attr(data-after);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  color: rgba(240, 248, 255, 0.021);
+  letter-spacing: 50px;
+  z-index: -1;
+  transition: 0.3s ease letter-spacing;
 }
 
 #header .nav-list ul li:hover a::after {
-	transform: translate(-50%, -50%) scale(1);
-	letter-spacing: initial;
-
+  transform: translate(-50%, -50%) scale(1);
+  letter-spacing: initial;
 }
 
 #header .nav-list ul li :hover {
-	background: linear-gradient(120deg, #5b0587, #ff0080, #ee3ce8);
-	background-size: 200% 200%;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	font-size: 1.9rem;
-	/* Adjust the font size as desired */
+  background: linear-gradient(120deg, #5b0587, #ff0080, #ee3ce8);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.9rem;
+  /* Adjust the font size as desired */
 }
 
-
-
 #header .hamburger {
-	height: 60px;
-	width: 60px;
-	display: inline-block;
-	border: 3px solid white;
-	border-radius: 50%;
-	position: relative;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	z-index: 100;
-	cursor: pointer;
-	transform: scale(.8);
-	margin-right: 20px;
-
-
-
+  height: 60px;
+  width: 60px;
+  display: inline-block;
+  border: 3px solid white;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  cursor: pointer;
+  transform: scale(0.8);
+  margin-right: 20px;
 }
 
 #header .hamburger::after {
-	position: absolute;
-	content: '';
-	height: 100%;
-	width: 100%;
-	border-radius: 50%;
-	border: 3px solid white;
-	animation: pulse 1s ease infinite;
-
-
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  border: 3px solid white;
+  animation: pulse 1s ease infinite;
 }
 
 #header .hamburger .bar {
-	height: 2px;
-	width: 30px;
-	position: relative;
-	background-color: white;
-	z-index: -1;
-
+  height: 2px;
+  width: 30px;
+  position: relative;
+  background-color: white;
+  z-index: -1;
 }
 
 #header .hamburger .bar::after,
 #header .hamburger .bar::before {
-	content: '';
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	left: 0;
-	background-color: white;
-	transition: .3s ease;
-	transition-property: top, bottom;
-
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  background-color: white;
+  transition: 0.3s ease;
+  transition-property: top, bottom;
 }
 
 #header .hamburger .bar::after {
-	top: 8px;
+  top: 8px;
 }
 
 #header .hamburger .bar::before {
-	bottom: 8px;
+  bottom: 8px;
 }
 
 #header .hamburger.active .bar::before {
-	bottom: 0;
+  bottom: 0;
 }
 
 #header .hamburger.active .bar::after {
-	top: 0;
+  top: 0;
 }
 
 /* CSS code for hamburger when open */
 #header .nav-list ul.active {
-	left: 0%;
+  left: 0%;
 }
 
 .nav-list ul li a.opened {
-
-	font-size: 2rem;
-	margin-bottom: 20px;
-
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
 .nav-list ul li a.opened:hover {
-
-	font-size: 3rem;
-
+  font-size: 3rem;
 }
 
 /*End header Hamburger section*/
 
-
-
-
 /*adjust for screens*/
 
 @media (max-width: 860px) {
-	.text-find {
-		white-space: nowrap;
-		font-size: 220%;
-		margin-top: 30%;
-	}
+  .text-find {
+    white-space: nowrap;
+    font-size: 220%;
+    margin-top: 30%;
+  }
 
-	.browse-btn {
-		top: 35%;
-	}
+  .browse-btn {
+    top: 35%;
+  }
 
-	.search {
-
-		top: 40%;
-
-	}
+  .search {
+    top: 40%;
+  }
 }
-
 
 /*MEDIA QUERY FOR TABLET*/
 
 @media only screen and (min-width: 768px) {
-	.cta {
+  .cta {
+    padding: 20px 60px;
+  }
 
-		padding: 20px 60px;
-	}
+  /*End trending*/
 
-	/*End trending*/
+  /*action section*/
+  #action .action-bottom .action-item {
+    margin: 0.5%;
+  }
 
-	/*action section*/
-	#action .action-bottom .action-item {
-
-		margin: .5%;
-	}
-
-	/*End action section*/
-
-
+  /*End action section*/
 }
 
 /*END media query for tablet*/
 
-
-
-
 /*MEDIA QUERY FOR DESKTOP*/
 @media only screen and (min-width: 1400px) {
-	/*Header*/
+  /*Header*/
 
-	/* Hamburger can be added back by removing line below*/
-	#header .hamburger {
-		display: none;
-	}
+  /* Hamburger can be added back by removing line below*/
+  #header .hamburger {
+    display: none;
+  }
 
-	/*Hamburger can be added back by removing line above*/
-	#header .nav-list ul {
-		position: initial;
-		display: block;
-		height: auto;
-		width: 900px;
-		background-color: transparent;
-	}
+  /*Hamburger can be added back by removing line above*/
+  #header .nav-list ul {
+    position: initial;
+    display: block;
+    height: auto;
+    width: 900px;
+    background-color: transparent;
+  }
 
-	#header .nav-list ul li {
-		display: inline-block;
+  #header .nav-list ul li {
+    display: inline-block;
+  }
 
-	}
+  #header .nav-list ul a::after {
+    display: none;
+  }
 
-	#header .nav-list ul a::after {
-		display: none;
-	}
-
-	/*End header*/
-
+  /*End header*/
 }
 
 /*END media query for desktop*/
+
+/*Carousel*/
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel {
+  border: #767171;
+}
+/*End Carousel*/

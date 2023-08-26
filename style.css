@@ -94,11 +94,11 @@ a {
 /*Text find your next movie*/
 .text-find {
 	font-family: 'montserrat';
-	font-size: 4rem;
+	font-size: 3rem;
 	text-align: left;
 	text-transform: uppercase;
 	letter-spacing: 1%;
-	line-height: 200%;
+	line-height: 150%;
 	text-decoration: none;
 	color: #faf7f7;
 	margin-left: 20px;
@@ -226,7 +226,7 @@ body:after,
 
 .search {
 	margin-left: 1.5rem;
-	margin-top: 1rem;
+	margin-top: 2rem;
 	background-color: transparent;
 	border: 2px solid #e9e9ec;
 	border-radius: 0px;
@@ -633,3 +633,12 @@ body:after,
 }
 
 /*END media query for desktop*/
+
+/*Carousel*/
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5); }
+  
+  .carousel {
+    border: #767171; }
+/*End Carousel*/

@@ -24,7 +24,7 @@ menuItems.forEach((item) => {
 
 //MOVIE API SECTION//
 
-const API_KEY = "c7ca505670cee9f71026a8900d9e5f33";
+const API_KEY = process.env.OPEN_WEATHER_API_KEY;
 const TRENDING_API_URL =
   "https://api.themoviedb.org/3/trending/movie/week?api_key=c7ca505670cee9f71026a8900d9e5f33";
 const API_URL = "https://api.themoviedb.org/3/discover/movie";

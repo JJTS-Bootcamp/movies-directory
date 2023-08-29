@@ -16,7 +16,7 @@
     "url": "git+https://github.com/JJTS-Bootcamp/movies-directory.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Jocelyn, Sylvia",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/JJTS-Bootcamp/movies-directory/issues"
@@ -28,4 +28,5 @@
   "dependencies": {
     "bootstrap": "^5.2.3"
   }
+
 }

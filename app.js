@@ -23,8 +23,8 @@ menuItems.forEach((item) => {
 });
 
 //MOVIE API SECTION//
-//const apiKey = process.env.OPEN_MOVIE_API_KEY;
-const apiKey="c7ca505670cee9f71026a8900d9e5f33";
+const apiKey = process.env.OPEN_MOVIE_API_KEY;
+// const apiKey="c7ca505670cee9f71026a8900d9e5f33";
 const TRENDING_API_URL =
     `https://api.themoviedb.org/3/trending/movie/week?api_key=${apiKey}`;
 const API_URL = "https://api.themoviedb.org/3/discover/movie";

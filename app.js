@@ -303,7 +303,7 @@ function searchMovies() {
   const searchInput = document.getElementById("search-input");
   const moviesContainer = document.getElementById("results-container");
   const searchQuery = searchInput.value;
-  const apiKey = process.env.OPEN_MOVIE_API_KEY;
+  const apiKey="c7ca505670cee9f71026a8900d9e5f33";
   const apiUrl = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${searchQuery}`;
 
   console.log(searchInput.value); //this was to check if the search bar was working, how many letters were typed in

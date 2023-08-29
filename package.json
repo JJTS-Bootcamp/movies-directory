@@ -2,7 +2,7 @@
   "name": "movies-directory",
   "version": "1.0.0",
   "description": "This is a project. It is a directory of movies. Created by JJTS Aug 2023.",
-  "source": "index.html",
+  "source": "movie.html",
   "directories": {
     "doc": "docs"
   },

@@ -2,12 +2,14 @@
   "name": "movies-directory",
   "version": "1.0.0",
   "description": "This is a project. It is a directory of movies. Created by JJTS Aug 2023.",
-  "main": "app.js",
+  "source": "index.html",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel --open",
+    "build": "parcel build"
   },
   "repository": {
     "type": "git",

@@ -1,189 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Movie App</title>
-  </head>
 
-  <body>
-    <!--Header-->
-    <section id="header">
-      <div class="header container">
-        <!--Trying to make when click on Movies JJTS go to home where appears find your next movie-->
-        <div class="nav-bar">
-          <div class="brand">
-            <div class="tittle-movies">
-              <a href="#" data-after="header container">
-                <h1>
-                  <span class="first-letter">M</span>ovies
-                  <span class="short-name" style="color: #5f1087">JJTS</span>
-                  <span class="full-name" title="Joyful Journey Tech Studios"
-                    >Joyful Journey Tech Studios</span
-                  >
-                  <!--This is the full name of the company if H4 will put in under the title movies-->
-                </h1>
-              </a>
-            </div>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Movie App</title>
+</head>
 
-          <div class="nav-list">
-            <div class="hamburger" id="hamburger">
-              <div class="bar"></div>
-            </div>
-            <ul>
-              <li><a href="#trending" data-after="Trending">Trending</a></li>
-              <li><a href="#action" data-after="Action">Action</a></li>
-              <li><a href="#family" data-after="Family">Family</a></li>
-              <li><a href="#horror" data-after="Horror">Horror</a></li>
-              <li><a href="#comedy" data-after="Comedy">Comedy</a></li>
-              <li><a href="#drama" data-after="Drama">Drama</a></li>
-            </ul>
+<body>
+  <!--Header-->
+  <section id="header">
+    <div class="header container">
+      <!--Trying to make when click on Movies JJTS go to home where appears find your next movie-->
+      <div class="nav-bar">
+        <div class="brand">
+          <div class="tittle-movies">
+            <a href="#" data-after="header container">
+              <h1>
+                <span class="first-letter">M</span>ovies
+                <span class="short-name" style="color: #5f1087">JJTS</span>
+                <span class="full-name" title="Joyful Journey Tech Studios">Joyful Journey Tech Studios</span>
+                <!--This is the full name of the company if H4 will put in under the title movies-->
+              </h1>
+            </a>
           </div>
         </div>
-      </div>
-    </section>
-    <!--End header-->
 
-    <!--Trending section or FIRST PAGE called home-->
-
-    <div class="text-find">
-      <div class="">
-        <h1>Find</h1>
-        <h1>Your Next</h1>
-        <h1 style="color: #5f1087">Movie</h1>
+        <div class="nav-list">
+          <div class="hamburger" id="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="#trending" data-after="Trending">Trending</a></li>
+            <li><a href="#action" data-after="Action">Action</a></li>
+            <li><a href="#family" data-after="Family">Family</a></li>
+            <li><a href="#horror" data-after="Horror">Horror</a></li>
+            <li><a href="#comedy" data-after="Comedy">Comedy</a></li>
+            <li><a href="#drama" data-after="Drama">Drama</a></li>
+          </ul>
+        </div>
       </div>
     </div>
-    <!--<div style="position: relative;">-->
-    <div class="browse-btn" id="browse-btn" onclick="toggleSearchBox()">
-      Here
+  </section>
+  <!--End header-->
+
+  <!--Trending section or FIRST PAGE called home-->
+
+  <div class="text-find">
+    <div class="">
+      <h1>Find</h1>
+      <h1>Your Next</h1>
+      <h1 style="color: #5f1087">Movie</h1>
     </div>
-    <div id="searchBox" style="display: none">
-      <input
-        type="text"
-        placeholder="Search..."
-        id="search-input"
-        class="search"
-        onchange="searchMovies()"
-      />
+  </div>
+  <!--<div style="position: relative;">-->
+  <div class="browse-btn" id="browse-btn" onclick="toggleSearchBox()">
+    Here
+  </div>
+  <div id="searchBox" style="display: none">
+    <input type="text" placeholder="Search..." id="search-input" class="search" onchange="searchMovies()" />
+  </div>
+
+  <section id="results-container" class="results-category">
+    <h1 class="section-title">Search Results</h1>
+    <div class="section-content">
+      <div class="movies-list"></div>
     </div>
+  </section>
 
-    <section id="results-container" class="results-category">
-      <h1 class="section-title">Search Results</h1>
-      <div class="section-content">
-        <div class="movies-list"></div>
-      </div>
-    </section>
+  <!--Trending for 20 movies section-->
+  <section id="trending" class="movie-category">
+    <h1 class="section-title">trending</h1>
+    <!--Travis Some text here describing the category-->
+    <p class="section-subtittle">Top 20 Movies</p>
+    <div class="section-content">
+      <div class="movies-list"></div>
+    </div>
+  </section>
+  <!--End trending section-->
 
-    <!--Trending for 20 movies section-->
-    <section id="trending" class="movie-category">
-      <h1 class="section-title">trending</h1>
-      <!--Travis Some text here describing the category-->
-      <p class="section-subtittle">Top 20 Movies</p>
-      <div class="section-content">
-        <div class="movies-list"></div>
-      </div>
-    </section>
-    <!--End trending section-->
+  <!--ACTION section-->
+  <section id="action" class="movie-category">
+    <h1 class="section-title">Action</h1>
+    <!--Travis Some text here describing the category-->
+    <p class="section-subtittle">
+      <strong><em>Nothing beats the adrenaline rush of pure action cinema – massive
+          blockbuster movies packed with punchy fight scenes and epic chase
+          sequences.</em></strong>
+    </p>
+    <div class="section-content">
+      <div class="movies-list"></div>
+    </div>
+  </section>
+  <!--End action section-->
 
-    <!--ACTION section-->
-    <section id="action" class="movie-category">
-      <h1 class="section-title">Action</h1>
-      <!--Travis Some text here describing the category-->
-      <p class="section-subtittle">
-        <strong
-          ><em
-            >Nothing beats the adrenaline rush of pure action cinema – massive
-            blockbuster movies packed with punchy fight scenes and epic chase
-            sequences.</em
-          ></strong
-        >
-      </p>
-      <div class="section-content">
-        <div class="movies-list"></div>
-      </div>
-    </section>
-    <!--End action section-->
+  <!--FAMILY section-->
+  <section id="family" class="movie-category">
+    <h1 class="section-title">Family</h1>
+    <!--Some text here describing the family category-->
+    <p class="section-subtittle">
+      <strong><em>Great recommendations that will be sure to please everyone in your
+          family—from preschoolers up to adults.</em></strong>
+    </p>
+    <div class="section-content">
+      <div class="movies-list"></div>
+    </div>
+  </section>
+  <!--End family section-->
 
-    <!--FAMILY section-->
-    <section id="family" class="movie-category">
-      <h1 class="section-title">Family</h1>
-      <!--Some text here describing the family category-->
-      <p class="section-subtittle">
-        <strong
-          ><em
-            >Great recommendations that will be sure to please everyone in your
-            family—from preschoolers up to adults.</em
-          ></strong
-        >
-      </p>
-      <div class="section-content">
-        <div class="movies-list"></div>
-      </div>
-    </section>
-    <!--End family section-->
+  <!--HORROR section-->
+  <section id="horror" class="movie-category">
+    <h1 class="section-title">Horror</h1>
+    <!--Some text here describing the category-->
+    <p class="section-subtittle">
+      <em><strong>These titles are sure to get your skin crawling. Don’t spill the
+          popcorn!</strong></em>
+    </p>
+    <div class="section-content">
+      <div class="movies-list"></div>
+    </div>
+  </section>
+  <!--End horror section-->
 
-    <!--HORROR section-->
-    <section id="horror" class="movie-category">
-      <h1 class="section-title">Horror</h1>
-      <!--Some text here describing the category-->
-      <p class="section-subtittle">
-        <em
-          ><strong
-            >These titles are sure to get your skin crawling. Don’t spill the
-            popcorn!</strong
-          ></em
-        >
-      </p>
-      <div class="section-content">
-        <div class="movies-list"></div>
-      </div>
-    </section>
-    <!--End horror section-->
+  <!--COMEDY section-->
+  <section id="comedy" class="movie-category">
+    <h1 class="section-title">Comedy</h1>
+    <!--Some text here describing the category-->
+    <p class="section-subtittle">
+      <em><strong>Sometimes a really good laugh is in order. We have your ticket
+          tight here!</strong></em>
+    </p>
+    <div class="section-content">
+      <div class="movies-list"></div>
+    </div>
+  </section>
+  <!--End comedy section-->
 
-    <!--COMEDY section-->
-    <section id="comedy" class="movie-category">
-      <h1 class="section-title">Comedy</h1>
-      <!--Some text here describing the category-->
-      <p class="section-subtittle">
-        <em
-          ><strong
-            >Sometimes a really good laugh is in order. We have your ticket
-            tight here!</strong
-          ></em
-        >
-      </p>
-      <div class="section-content">
-        <div class="movies-list"></div>
-      </div>
-    </section>
-    <!--End comedy section-->
+  <!--DRAMA section-->
+  <section id="drama" class="movie-category">
+    <h1 class="section-title">Drama</h1>
+    <!--Some text here describing the category-->
+    <p class="section-subtittle">
+      <em><strong>Compelling stories bring out the best of human emotions. Get lost
+          in one of these heartfelt scripts.</strong></em>
+    </p>
+    <div class="section-content">
+      <div class="movies-list"></div>
+    </div>
+  </section>
 
-    <!--DRAMA section-->
-    <section id="drama" class="movie-category">
-      <h1 class="section-title">Drama</h1>
-      <!--Some text here describing the category-->
-      <p class="section-subtittle">
-        <em
-          ><strong
-            >Compelling stories bring out the best of human emotions. Get lost
-            in one of these heartfelt scripts.</strong
-          ></em
-        >
-      </p>
-      <div class="section-content">
-        <div class="movies-list"></div>
-      </div>
-    </section>
+  <!--End drama section-->
 
-    <!--End drama section-->
+  <!--Footer-->
+  <footer>
+    <h2>Movie JJTS "Joyful Journey Tech Studios"</h2>
+    <p><em>Produced by Jocelyn, Jason, Travis and Sylvia.</em></p>
+  </footer>
+  <script src="app.js"></script>
+</body>
 
-    <!--Footer-->
-    <footer>
-      <h2>Movie JJTS "Joyful Journey Tech Studios"</h2>
-      <p><em>Produced by Jocelyn, Jason, Travis and Sylvia.</em></p>
-    </footer>
-    <script src="app.js"></script>
-  </body>
 </html>

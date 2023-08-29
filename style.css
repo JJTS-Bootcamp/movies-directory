@@ -66,7 +66,7 @@ a {
 }
 
 /* Show the full name when hovering over the short name */
-.short-name:hover + .full-name {
+.short-name:hover+.full-name {
   opacity: 1;
 }
 
@@ -120,23 +120,21 @@ a {
   content: "";
   background: linear-gradient(120deg, #6559ae, #ff7159, #6559ae);
   background-size: 400% 400%;
-  -webkit-clip-path: polygon(
-    0% 100%,
-    4px 100%,
-    4px 4px,
-    216px 4px,
-    216px 66px,
-    4px 66px,
-    4px 100%,
-    100% 100%,
-    100% 0%,
-    0% 0%
-  );
+  -webkit-clip-path: polygon(0% 100%,
+      4px 100%,
+      4px 4px,
+      216px 4px,
+      216px 66px,
+      4px 66px,
+      4px 100%,
+      100% 100%,
+      100% 0%,
+      0% 0%);
   -webkit-animation: gradient 3s ease-in-out infinite,
     border 1s forwards ease-in-out reverse;
 }
 
-.browse-btn > span {
+.browse-btn>span {
   display: block;
   background: linear-gradient(120deg, #6559ae, #ff7159, #6559ae);
   background-size: 100%;
@@ -148,7 +146,7 @@ a {
 }
 
 .browse-btn:after,
-.browse-btn > span {
+.browse-btn>span {
   position: relative;
   top: 0;
   left: 0;
@@ -596,4 +594,5 @@ body:after,
 .carousel {
   border: #767171;
 }
+
 /*End Carousel*/

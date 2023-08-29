@@ -1,0 +1,29 @@
+{
+  "name": "movies-directory",
+  "version": "1.0.0",
+  "description": "This is a project. It is a directory of movies. Created by JJTS Aug 2023.",
+  "main": "app.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JJTS-Bootcamp/movies-directory.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JJTS-Bootcamp/movies-directory/issues"
+  },
+  "homepage": "https://github.com/JJTS-Bootcamp/movies-directory#readme",
+  "devDependencies": {
+    "parcel": "^2.9.3"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.3"
+  }
+}

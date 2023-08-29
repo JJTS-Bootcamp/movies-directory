@@ -23,7 +23,7 @@ menuItems.forEach((item) => {
 });
 
 //MOVIE API SECTION//
-
+OPEN_MOVIE_API_KEY = "c7ca505670cee9f71026a8900d9e5f33";
 const API_KEY = OPEN_MOVIE_API_KEY;
 const TRENDING_API_URL =
   "https://api.themoviedb.org/3/trending/movie/week?api_key=c7ca505670cee9f71026a8900d9e5f33";

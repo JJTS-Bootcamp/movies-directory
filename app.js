@@ -24,7 +24,6 @@ menuItems.forEach((item) => {
 
 //MOVIE API SECTION//
 const apiKey = process.env.OPEN_MOVIE_API_KEY;
-// const apiKey="c7ca505670cee9f71026a8900d9e5f33";
 const TRENDING_API_URL = `https://api.themoviedb.org/3/trending/movie/week?api_key=${apiKey}`;
 const API_URL = "https://api.themoviedb.org/3/discover/movie";
 const IMG_PATH = "https://image.tmdb.org/t/p/w1280";
@@ -294,7 +293,6 @@ function searchMovies() {
   const searchInput = document.getElementById("search-input");
   const moviesContainer = document.getElementById("results-container");
   const searchQuery = searchInput.value;
-  const apiKey = "c7ca505670cee9f71026a8900d9e5f33";
   const apiUrl = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${searchQuery}`;
 
   console.log(searchInput.value); //this was to check if the search bar was working, how many letters were typed in

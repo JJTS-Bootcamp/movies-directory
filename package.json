@@ -27,6 +27,6 @@
   },
   "dependencies": {
     "bootstrap": "^5.2.3"
-  }
-
+  },
+  "main": "app.js"
 }

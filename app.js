@@ -23,8 +23,8 @@ menuItems.forEach((item) => {
 });
 
 //MOVIE API SECTION//
-const apiKey = process.env.OPEN_MOVIE_API_KEY;
-const TRENDING_API_URL = `https://api.themoviedb.org/3/trending/movie/week?api_key=${apiKey}`;
+const APIKEY = process.env.OPEN_MOVIE_API_KEY;
+const TRENDING_API_URL = `https://api.themoviedb.org/3/trending/movie/week?api_key=${APIKEY}`;
 const API_URL = "https://api.themoviedb.org/3/discover/movie";
 const IMG_PATH = "https://image.tmdb.org/t/p/w1280";
 
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 async function fetchActionMovies() {
   try {
-    const response = await fetch(`${API_URL}?api_key=${apiKey}&with_genres=28`);
+    const response = await fetch(`${API_URL}?api_key=${APIKEY}&with_genres=28`);
     const data = await response.json();
     return data.results;
   } catch (error) {
@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 async function fetchFamilyMovies() {
   try {
     const response = await fetch(
-      `${API_URL}?api_key=${apiKey}&with_genres=10751`
+      `${API_URL}?api_key=${APIKEY}&with_genres=10751`
     );
     const data = await response.json();
     return data.results;
@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 async function fetchHorrorMovies() {
   try {
-    const response = await fetch(`${API_URL}?api_key=${apiKey}&with_genres=27`);
+    const response = await fetch(`${API_URL}?api_key=${APIKEY}&with_genres=27`);
     const data = await response.json();
     return data.results;
   } catch (error) {
@@ -198,7 +198,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 async function fetchComedyMovies() {
   try {
-    const response = await fetch(`${API_URL}?api_key=${apiKey}&with_genres=35`);
+    const response = await fetch(`${API_URL}?api_key=${APIKEY}&with_genres=35`);
     const data = await response.json();
     return data.results;
   } catch (error) {
@@ -239,7 +239,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 async function fetchDramaMovies() {
   try {
-    const response = await fetch(`${API_URL}?api_key=${apiKey}&with_genres=18`);
+    const response = await fetch(`${API_URL}?api_key=${APIKEY}&with_genres=18`);
     const data = await response.json();
     return data.results;
   } catch (error) {
@@ -278,7 +278,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 /*all of search*/
 /*SEARCH BAR*/
-function toggleSearchBox() {
+export function toggleSearchBox() {
   const searchBox = document.getElementById("searchBox");
   const resultsContainer = document.getElementById("results-container");
   searchBox.style.display =
@@ -290,12 +290,12 @@ function toggleSearchBox() {
 }
 
 // Define the searchMovies function in the global scope
-function searchMovies() {
+export function searchMovies() {
   const searchInput = document.getElementById("search-input");
   const moviesContainer = document.getElementById("results-container");
   const searchQuery = searchInput.value;
-  const apiKey = process.env.OPEN_MOVIE_API_KEY;
-  const apiUrl = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${searchQuery}`;
+  const APIKEY = process.env.OPEN_MOVIE_API_KEY;
+  const apiUrl = `https://api.themoviedb.org/3/search/movie?api_key=${APIKEY}&query=${searchQuery}`;
 
   console.log(searchInput.value); //this was to check if the search bar was working, how many letters were typed in
 

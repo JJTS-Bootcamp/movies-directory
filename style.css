@@ -79,12 +79,15 @@ a {
 
 /*First PAGE called HOME*/
 /*Find your next movie*/
-/* .home {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	min-height: 100vh;
-} */
+.home-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  margin-left: 3vw;
+  margin-right: 3vw;
+}
 
 /*Text find your next movie*/
 .text-find {
@@ -96,27 +99,25 @@ a {
   line-height: 150%;
   text-decoration: none;
   color: #faf7f7;
-  margin-left: 20px;
-  margin-top: 10%;
-  min-height: 90vh;
+  padding-bottom: 20vh;
 }
 
 /*end of find your next movie*/
 /*BROWSE btn but now is going to say search instead of browser*/
 /* Browser Btn Animated*/
 .browse-btn {
+  position: absolute;
   display: block;
   width: 220px;
   height: 70px;
   z-index: 1;
-
-  top: 45%;
-  left: 1.5rem;
-
+  cursor: pointer;
+  bottom: 35vh;
+  left: 3vw;
   color: #6559ae;
 }
 
-.browse-btn:after {
+.browse-btn:before {
   content: "";
   background: linear-gradient(120deg, #6559ae, #ff7159, #6559ae);
   background-size: 400% 400%;
@@ -145,23 +146,15 @@ a {
   animation: gradient 3s ease-in-out infinite;
 }
 
-.browse-btn:after,
-.browse-btn>span {
-  position: relative;
+.browse-btn:before {
+  position: absolute;
   top: 0;
   left: 0;
-}
-
-/* helpers for btn*/
-
-.absolute-centering,
-body:after,
-.browse-btn,
-.browse-btn:after {
-  position: absolute;
   right: 0;
   bottom: 0;
 }
+
+/* helpers for btn*/
 
 .text-formatting,
 .browse-btn {
@@ -180,6 +173,7 @@ body:after,
   color: #ff7159;
   /* Set the color of the text when hovering */
 }
+
 
 @-moz-keyframes gradient {
   0% {
@@ -228,8 +222,6 @@ body:after,
 /*SEARCH BAR*/
 
 .search {
-  margin-left: 1.5rem;
-  margin-top: 2rem;
   background-color: transparent;
   border: 2px solid #e9e9ec;
   border-radius: 0px;
@@ -237,7 +229,7 @@ body:after,
   font-family: inherit;
   font-size: 1rem;
   position: absolute;
-  top: 50%;
+  bottom: 25vh;
   font-family: verdana;
   text-align: left;
   line-height: 2rem;
@@ -372,7 +364,7 @@ body:after,
 
 #header .header {
   min-height: 8vh;
-  background-color: rgba(31, 30, 30, 0.24);
+  background-color: rgba(0, 0, 0, 0.75);
   transition: 0.3s ease background-color;
 }
 
@@ -519,19 +511,29 @@ body:after,
 
 /*adjust for screens*/
 
+
 @media (max-width: 860px) {
+  .home-container {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: start;
+  }
+
   .text-find {
     white-space: nowrap;
     font-size: 220%;
-    margin-top: 30%;
+    margin-left: 5vw;
+    margin-top: 5vh;
   }
 
   .browse-btn {
-    top: 35%;
+    bottom: 20vh;
+    left: 8vw;
   }
 
   .search {
-    top: 40%;
+    bottom: 15vh;
+    left: 8vw;
   }
 }
 
@@ -584,15 +586,3 @@ body:after,
 }
 
 /*END media query for desktop*/
-
-/*Carousel*/
-
-.carousel-caption {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.carousel {
-  border: #767171;
-}
-
-/*End Carousel*/

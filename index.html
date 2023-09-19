@@ -32,7 +32,7 @@
             <div class="bar"></div>
           </div>
           <ul>
-            <li><a href="#trending" data-after="Trending">Trending Movies</a></li>
+            <li><a href="#trending" data-after="Trending">Trending</a></li>
             <li><a href="#action" data-after="Action">Action</a></li>
             <li><a href="#family" data-after="Family">Family</a></li>
             <li><a href="#horror" data-after="Horror">Horror</a></li>
@@ -46,28 +46,29 @@
   <!--End header-->
 
   <!--Trending section or FIRST PAGE called home-->
-
-  <div class="text-find">
-    <div class="">
+  <!--Home Section-->
+  <div class="home-container">
+    <div class="text-find" style="max-width: 35%">
       <h1>Find</h1>
       <h1>Your Next</h1>
       <h1 style="color: #5f1087">Movie</h1>
+
+      <div class="browse-btn" id="browse-btn" onclick="toggleSearchBox()">
+        Here
+      </div>
+      <div id="searchBox" style="display: none">
+        <input type="text" placeholder="Search..." id="search-input" class="search" onchange="searchMovies()" />
+      </div>
     </div>
   </div>
-  <!--<div style="position: relative;">-->
-  <div class="browse-btn" id="browse-btn" onclick="toggleSearchBox()">
-    Here
-  </div>
-  <div id="searchBox" style="display: none">
-    <input type="text" placeholder="Search..." id="search-input" class="search" onchange="searchMovies()" />
-  </div>
-
+  <!--this is part of the search results but it will appear in another section after search enter-->
   <section id="results-container" class="results-category">
     <h1 class="section-title">Search Results</h1>
     <div class="section-content">
       <div class="movies-list"></div>
     </div>
   </section>
+  <!--End of Home Section-->
 
   <!--Trending for 20 movies section-->
   <section id="trending" class="movie-category">
@@ -129,7 +130,7 @@
     <!--Some text here describing the category-->
     <p class="section-subtittle">
       <em><strong>Sometimes a really good laugh is in order. We have your ticket
-          tight here!</strong></em>
+          right here!</strong></em>
     </p>
     <div class="section-content">
       <div class="movies-list"></div>

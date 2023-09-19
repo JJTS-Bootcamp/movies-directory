@@ -275,6 +275,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 });
 //END OF DRAMA MOVIES SECTION//
+
 /*all of search*/
 /*SEARCH BAR*/
 function toggleSearchBox() {
@@ -293,6 +294,7 @@ function searchMovies() {
   const searchInput = document.getElementById("search-input");
   const moviesContainer = document.getElementById("results-container");
   const searchQuery = searchInput.value;
+  const apiKey = process.env.OPEN_MOVIE_API_KEY;
   const apiUrl = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${searchQuery}`;
 
   console.log(searchInput.value); //this was to check if the search bar was working, how many letters were typed in
